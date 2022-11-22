@@ -14,7 +14,7 @@ public class PropTransform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    if(Physics.Raycast(transform.position, transform.forward, out var hit, 2, mask)){
+    if(Physics.Raycast(transform.position, transform.forward, out var hit, Mathf.Infinity, mask)){
         //Physics.Raycast()
         var obj = hit.collider.gameObject;
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);

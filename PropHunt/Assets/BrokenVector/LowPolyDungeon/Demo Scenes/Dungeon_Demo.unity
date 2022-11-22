@@ -49857,6 +49857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1149450743610432623, guid: dc02f77b0506f764c9d22c61c681c4af, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc02f77b0506f764c9d22c61c681c4af, type: 3}
 --- !u!1001 &1227195644
@@ -53340,7 +53344,6 @@ GameObject:
   - component: {fileID: 1296443224}
   - component: {fileID: 1296443223}
   - component: {fileID: 1296443222}
-  - component: {fileID: 1296443221}
   - component: {fileID: 1296443226}
   - component: {fileID: 1296443227}
   - component: {fileID: 1296443228}
@@ -53351,20 +53354,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1296443221
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296443220}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1296443222
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53414,7 +53403,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296443220}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 196b5a548621de443976c8d3e69c75e4, type: 3}
 --- !u!4 &1296443224
 Transform:
   m_ObjectHideFlags: 0
@@ -53459,7 +53448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c22434ae89a9544986f13492886ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 4
   groundDrag: 5
   jumpForce: 0.8
   jumpCooldown: 0.25
@@ -53470,21 +53459,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 401591058}
---- !u!114 &1296443228
-MonoBehaviour:
+--- !u!64 &1296443228
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296443220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92a084fdec779e749b6bd8d02a915b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 196b5a548621de443976c8d3e69c75e4, type: 3}
 --- !u!1001 &1296699845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81417,6 +81405,7 @@ GameObject:
   - component: {fileID: 2036894810}
   - component: {fileID: 2036894809}
   - component: {fileID: 2036894811}
+  - component: {fileID: 2036894812}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -81505,6 +81494,21 @@ MonoBehaviour:
   sensX: 200
   sensY: 200
   orientation: {fileID: 401591058}
+--- !u!114 &2036894812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036894807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a084fdec779e749b6bd8d02a915b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1001 &2041407429
 PrefabInstance:
   m_ObjectHideFlags: 0
