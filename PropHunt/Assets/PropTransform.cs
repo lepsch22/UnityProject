@@ -25,32 +25,16 @@ public class PropTransform : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out var hit, Mathf.Infinity, mask))
             {
                 var obj = hit.collider.gameObject;
-
-                //Destroy(player.GetComponent<MeshRenderer>());
-                //Destroy(player.GetComponent<MeshFilter>());
-                //player.AddComponent<MeshFilter>();
-                //MeshFilter playermesh = player.GetComponent<MeshFilter>();
-                //playermesh.mesh = obj.GetComponent<MeshFilter>().mesh;
-                //playermesh.mesh = Resources.Load<Mesh>("Chair");
-                //player.AddComponent<MeshRenderer>();
-
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 Debug.Log($"looking at {obj.name}", this);
-
-                //Mesh mesh = obj.GetComponent<MeshFilter>().sharedMesh;
-                //Vector3[] verticies = mesh.vertices;
-                //int p = 0;
-                //while (p < verticies.Length)
-                //{
-                //    verticies[p] += new Vector3(0, Random.Range(-0.3F, 0.3F), 0);
-                //}
-                //Mesh playermesh = player.GetComponent<MeshFilter>().mesh;
-                //playermesh.vertices = verticies;
-                //playermesh.RecalculateNormals();
                 Mesh mesh = obj.GetComponent<MeshFilter>().mesh;
                 Mesh mesh2 = Instantiate(mesh);
-                //player.GetComponent<MeshFilter>().sharedMesh = mesh2;
-                player.GetComponent<MeshFilter>().mesh = mesh2;       
+                Mesh meshCollider = player.GetComponent<MeshCollider>().sharedMesh;
+                player.GetComponent<MeshCollider>().sharedMesh = mesh2;
+                player.GetComponent<MeshFilter>().mesh = mesh2;
+                player.GetComponent<MeshRenderer>().material = obj.GetComponent<MeshRenderer>().material;
+                player.transform.rotation = obj.transform.rotation;
+                player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z);
             }
             else
             {
