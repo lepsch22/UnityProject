@@ -12,7 +12,7 @@ public class playerController : MonoBehaviour
     public GameObject rb;
 
     private bool _isGrounded => Physics.Raycast(
-        new Vector2(rb.transform.position.x,rb.transform.position.y+2.0f),Vector3.down,3.0f);
+        new Vector2(rb.transform.position.x,rb.transform.position.y+1f),Vector3.down,3.0f);
 
     // Start is called before the first frame update
     void Start()
@@ -32,4 +32,7 @@ public class playerController : MonoBehaviour
     {
         
     }
+    //void isGrounded() { 
+    //    Physics.Raycast(transform.position, Vector3.down, )
+    //}
 }
