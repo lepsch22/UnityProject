@@ -5,8 +5,10 @@ using UnityEngine;
 public class HidePlayerToSelf : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Camera playerCamera;
     void Start()
     {
+        
         
     }
 
