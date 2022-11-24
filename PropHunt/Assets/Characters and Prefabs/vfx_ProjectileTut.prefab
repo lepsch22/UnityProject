@@ -4844,7 +4844,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.05
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -4884,7 +4884,7 @@ GameObject:
   - component: {fileID: 8105389563641200080}
   m_Layer: 0
   m_Name: vfx_ProjectileTut
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4897,7 +4897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979709230727262631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2529552, y: 5.6199017, z: -13.262511}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4917,8 +4917,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.16188478
+  m_Center: {x: 0, y: 0, z: 0.33811522}
 --- !u!54 &5203466720071240767
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4947,6 +4947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b195f1d6fa28a647b81245d2aa33d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitNonPlayerProp: 0
+  destroyProjectile: 0
 --- !u!1 &6960461070122083382
 GameObject:
   m_ObjectHideFlags: 0
@@ -5024,7 +5026,7 @@ TrailRenderer:
   m_Time: 0.15
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -5038,8 +5040,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.9592502
-        value: 0.006222225
+        time: 0.21675754
+        value: 0.04180572
         inSlope: 0
         outSlope: 0
         tangentMode: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -9,12 +10,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ProjectileShoot : MonoBehaviour
 {
     [SerializeField] private InputActionReference triggerActionReference;
+    [SerializeField] TextMeshProUGUI m_Object;
 
     public Transform RHfirepoint;
     public GameObject projectile;
     public XRRayInteractor rayInteractor;
     public float projectileSpeed = 30;
-
+    public List<GameObject> unityGameObjects = new List<GameObject>();
     //public LayerMask mask;
     public Camera cam;
     private Vector3 destination;
@@ -55,10 +57,42 @@ public class ProjectileShoot : MonoBehaviour
         }
         
     }
-
+    
     void InstantiatieProjectile(Transform firepoint) 
     {
         var projectileObj = Instantiate(projectile, firepoint.position, Quaternion.identity) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (destination - firepoint.position).normalized * projectileSpeed;
+        unityGameObjects.Add(projectileObj);
+        //listcounter++;
     }
+    //public int listcounter = 0;
+    private void Update()
+    {
+        if (unityGameObjects.Count > 0)
+        {
+            for (int i = 0; i < unityGameObjects.Count; i++)
+                if (unityGameObjects[i].GetComponent<ProjectleTut>().destroyProjectile == true)
+                {
+                    Debug.Log("Test damage " + unityGameObjects[i].GetComponent<ProjectleTut>().hitNonPlayerProp);
+                    if(unityGameObjects[i].GetComponent<ProjectleTut>().hitNonPlayerProp == true)
+                    {
+
+                        int temp;
+                        int.TryParse(m_Object.text, out temp);
+                        temp--;
+                        Debug.Log("Test String " + temp.ToString());
+
+                        m_Object.text = temp.ToString();
+
+
+
+                    }
+                    Destroy(unityGameObjects[i]);
+                    unityGameObjects.RemoveAt(i);
+                    //listcounter--;
+                }
+
+        }
+    }
+
 }
