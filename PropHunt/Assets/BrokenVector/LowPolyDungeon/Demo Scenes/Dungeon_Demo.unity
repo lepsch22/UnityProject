@@ -77932,7 +77932,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1712520069333877436, guid: a033f4b2f8b7b8d41974b1ce8c58d170, type: 3}
       propertyPath: m_Name
-      value: tbell
+      value: pmodeltest
       objectReference: {fileID: 0}
     - target: {fileID: 1712520069333877436, guid: a033f4b2f8b7b8d41974b1ce8c58d170, type: 3}
       propertyPath: m_IsActive
@@ -78222,6 +78222,22 @@ PrefabInstance:
       propertyPath: spawnpoints.Array.data[1]
       value: 
       objectReference: {fileID: 1036056578}
+    - target: {fileID: 3446731546572776767, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
+      propertyPath: m_PositionInput.m_Action.m_Id
+      value: 2ec52176-3f43-4fbb-ac4f-747e91a2fcf5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446731546572776767, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
+      propertyPath: m_RotationInput.m_Action.m_Id
+      value: 581fb144-4853-48ea-827d-abcc214ae08e
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446731546572776767, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
+      propertyPath: m_PositionInput.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 0fa558ae-b043-4031-a150-61414b72c559
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446731546572776767, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
+      propertyPath: m_RotationInput.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: bce561f3-f1d6-4911-b320-ab3e5640adcf
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
 --- !u!1001 &3909649308912405421
@@ -78730,6 +78746,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7471289406991211684, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
+      propertyPath: m_PositionInput.m_Action.m_Id
+      value: 9257232c-e1f2-4f96-9c29-c23407b6b859
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471289406991211684, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
+      propertyPath: m_RotationInput.m_Action.m_Id
+      value: 42f8e122-e1ca-43b6-8d64-f263f1699c30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471289406991211684, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
+      propertyPath: m_PositionInput.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 2ba01bd7-12e3-470c-a03f-39ec2751cbd3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471289406991211684, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
+      propertyPath: m_RotationInput.m_Action.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 176fe925-bd2b-46f3-a1d3-2604289f3498
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471289407247597420, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471289407247597420, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7471289407247597421, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
       propertyPath: m_InteractionManager
       value: 
