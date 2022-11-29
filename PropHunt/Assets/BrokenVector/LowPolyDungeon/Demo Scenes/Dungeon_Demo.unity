@@ -55710,7 +55710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1517109932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55777,7 +55777,7 @@ MonoBehaviour:
   networkAddress: localhost
   maxConnections: 100
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 7471289407975927164, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
+  playerPrefab: {fileID: 0}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
@@ -79233,7 +79233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3446731545090363645, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3446731545858967645, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
       propertyPath: m_InteractionManager
@@ -79985,7 +79985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7471289407975927164, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7471289407975927167, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
       propertyPath: m_RootOrder
