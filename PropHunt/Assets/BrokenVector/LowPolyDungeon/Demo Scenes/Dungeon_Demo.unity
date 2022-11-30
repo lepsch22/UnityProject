@@ -55701,9 +55701,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1517109936}
-  - component: {fileID: 1517109935}
-  - component: {fileID: 1517109934}
   - component: {fileID: 1517109932}
+  - component: {fileID: 1517109937}
+  - component: {fileID: 1517109938}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -55740,48 +55740,6 @@ MonoBehaviour:
   debugLog: 0
   statisticsGUI: 0
   statisticsLog: 0
---- !u!114 &1517109934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517109931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetX: 0
-  offsetY: 0
---- !u!114 &1517109935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517109931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
-  runInBackground: 1
-  autoStartServerBuild: 1
-  autoConnectClientBuild: 0
-  sendRate: 30
-  offlineScene: 
-  onlineScene: 
-  transport: {fileID: 1517109932}
-  networkAddress: localhost
-  maxConnections: 100
-  authenticator: {fileID: 0}
-  playerPrefab: {fileID: 0}
-  autoCreatePlayer: 1
-  playerSpawnMethod: 0
-  spawnPrefabs: []
-  timeInterpolationGui: 0
 --- !u!4 &1517109936
 Transform:
   m_ObjectHideFlags: 0
@@ -55797,6 +55755,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1517109937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517109931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 135c8e73ca127ec4a9b6b3560deb9218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  runInBackground: 0
+  autoStartServerBuild: 0
+  autoConnectClientBuild: 0
+  sendRate: 0
+  offlineScene: 
+  onlineScene: 
+  transport: {fileID: 1517109932}
+  networkAddress: 
+  maxConnections: 0
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 0}
+  autoCreatePlayer: 0
+  playerSpawnMethod: 0
+  spawnPrefabs:
+  - {fileID: 3446731545090363645, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
+  - {fileID: 7471289407975927164, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
+  timeInterpolationGui: 0
+  test: 0
+--- !u!114 &1517109938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517109931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetX: 0
+  offsetY: 0
 --- !u!4 &1517739167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3640300687198572528, guid: 23e2a639ca3c8bb43ba7ae9988ecc0e4, type: 3}
@@ -79179,6 +79182,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2165808001369161829, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
+      propertyPath: sceneId
+      value: 2928174230
+      objectReference: {fileID: 0}
     - target: {fileID: 3446731544675055710, guid: 9075df365b02bf44d8074ee62fa3be7b, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -79985,7 +79992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7471289407975927164, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7471289407975927167, guid: e7518a8d5af4d0e41904af8cc4472ad6, type: 3}
       propertyPath: m_RootOrder

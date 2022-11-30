@@ -10,15 +10,12 @@ public class ViewCanvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wristCanvas.setActive(false);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(leftController.rotation.x > 90)
-
         
     }
 }
