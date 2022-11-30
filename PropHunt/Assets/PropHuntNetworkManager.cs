@@ -52,31 +52,34 @@ public class PropHuntNetworkManager : NetworkManager
         Debug.Log("testing host");
     }
 
-    // public override void OnClientConnect()
-    // {
-    //     base.OnClientConnect();
+    public override void OnClientConnect()
+    {
+        base.OnClientConnect();
 
-    //     // you can send the message here, or wherever else you want
-    //     PropOrHunter characterMessage = new PropOrHunter
-    //     {
-    //         isProp = gamedata.GetComponent<GameData>().prop
-    //     };
+         // you can send the message here, or wherever else you want
+         PropOrHunter characterMessage = new PropOrHunter
+        {
+             isProp = gamedata.GetComponent<GameData>().prop
+         };
 
-    //     Debug.Log("testing" + characterMessage.isProp);
+         Debug.Log("testing" + characterMessage.isProp);
 
-    //     NetworkClient.Send(characterMessage);
-    // }
+        NetworkClient.Send(characterMessage);
+    }
 
     void OnCreateCharacter(NetworkConnectionToClient conn, PropOrHunter message){
+        Debug.Log("HELLO I AM MESSAGE");
+        
         if(gamedata.GetComponent<GameData>().prop){
-            GameObject gameObject = Instantiate(this.spawnPrefabs[1]);
+            GameObject gameObject = Instantiate(this.spawnPrefabs[0]);
             NetworkServer.AddPlayerForConnection(conn, gameObject);
             Debug.Log("testing prop spawn");
         } else {
-            GameObject gameObject = Instantiate(this.spawnPrefabs[2]);
+            GameObject gameObject = Instantiate(this.spawnPrefabs[1]);
             NetworkServer.AddPlayerForConnection(conn, gameObject);
             Debug.Log("testing hunter spawn");
         }
+        
 
     }
 }

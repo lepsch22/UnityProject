@@ -14,7 +14,6 @@ public class playerController : MonoBehaviour
     private bool _isGrounded => Physics.Raycast(
         new Vector2(rb.transform.position.x,rb.transform.position.y+1f),Vector3.down,3.0f);
 
-    // Start is called before the first frame update
     void Start()
     {
         jumpActionReference.action.performed += OnJump;
@@ -26,13 +25,9 @@ public class playerController : MonoBehaviour
         Debug.Log($"Adding Force");
         rb.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce);
     }
-
-    // Update is called once per frame
     void Update()
     {
         
     }
-    //void isGrounded() { 
-    //    Physics.Raycast(transform.position, Vector3.down, )
-    //}
 }
+//Disable make the

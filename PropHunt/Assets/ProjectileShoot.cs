@@ -25,7 +25,7 @@ public class ProjectileShoot : MonoBehaviour
         triggerActionReference.action.performed += ShootProjectile;
 
     }
-
+    /*
     public void OnHoverEntered(HoverEnterEventArgs args) 
     {
         Debug.Log($"{args.interactorObject} hovered over {args.interactableObject}", this);
@@ -33,7 +33,7 @@ public class ProjectileShoot : MonoBehaviour
     public void OnHoverExited(HoverExitEventArgs args)
     {
         Debug.Log($"{args.interactorObject} stopped hovering over {args.interactableObject}", this);
-    }
+    }   */
 
 
     private void ShootProjectile(InputAction.CallbackContext ob)
