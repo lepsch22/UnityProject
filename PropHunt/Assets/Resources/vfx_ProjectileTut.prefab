@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1979709229714638655}
   - component: {fileID: 1979709229714638625}
   - component: {fileID: 1979709229714638654}
+  - component: {fileID: 4003413302858086131}
   m_Layer: 0
   m_Name: Beam
   m_TagString: Untagged
@@ -4870,6 +4871,22 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &4003413302858086131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979709229714638652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &1979709230727262631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4882,6 +4899,7 @@ GameObject:
   - component: {fileID: 4794134471223658405}
   - component: {fileID: 5203466720071240767}
   - component: {fileID: 8105389563641200080}
+  - component: {fileID: -7898124356687296171}
   m_Layer: 0
   m_Name: vfx_ProjectileTut
   m_TagString: Bullet
@@ -4949,6 +4967,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitNonPlayerProp: 0
   destroyProjectile: 0
+--- !u!114 &-7898124356687296171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979709230727262631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6960461070122083382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,6 +4999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5271739304983364405}
   - component: {fileID: 3021923885193164959}
+  - component: {fileID: 6765923716309653478}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -5089,3 +5130,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &6765923716309653478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6960461070122083382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
