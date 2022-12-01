@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using Photon.Pun;
 
 public class NetworkHunter : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class NetworkHunter : MonoBehaviour
     public GameObject CameraController;
     public GameObject leftHandController;
     public GameObject rightHandController;
+    private PhotonView photonView;
     //public Transform localPlace;
     //InputDevice leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
     // Start is called before the first frame update
@@ -20,19 +22,23 @@ public class NetworkHunter : MonoBehaviour
         CameraController = GameObject.Find("Main Camera");
         leftHandController = GameObject.Find("LeftHand Controller");
         rightHandController = GameObject.Find("rightHand Controller");
+        photonView = GetComponent<PhotonView>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //CameraController = GameObject.Find("Main Camera");
-        Head.transform.position = CameraController.transform.position;
-        Head.transform.rotation = CameraController.transform.rotation;
-        leftHand.position = leftHandController.transform.position;
-        leftHand.rotation = leftHandController.transform.rotation;
-        rightHand.position = rightHand.transform.position;
-        rightHand.rotation = rightHand.transform.rotation;
+        if (photonView.IsMine)
+        {
+            //CameraController = GameObject.Find("Main Camera");
+            Head.transform.position = CameraController.transform.position;
+            Head.transform.rotation = CameraController.transform.rotation;
+            leftHand.position = leftHandController.transform.position;
+            leftHand.rotation = leftHandController.transform.rotation;
+            rightHand.position = rightHand.transform.position;
+            rightHand.rotation = rightHand.transform.rotation;
+        }
 
         //MapPosition(Head, XRNode.Head);
         // MapPosition(leftHand, XRNode.LeftHand);

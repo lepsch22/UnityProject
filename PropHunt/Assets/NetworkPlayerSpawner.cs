@@ -12,15 +12,15 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
 
-        gamedata = GameObject.Find("GameData");
+        //gamedata = GameObject.Find("GameData");
 
-        if(gamedata.GetComponent<GameData>().prop){
-            Debug.Log("Spawn Prop");
-            spawnedPlayerPrefab = PhotonNetwork.Instantiate("PlayerProp", transform.position, transform.rotation);
-        } else {
-            Debug.Log("Spawn Hunter");
-            spawnedPlayerPrefab = PhotonNetwork.Instantiate("PlayerHunter", transform.position, transform.rotation);
-        }
+        //if(gamedata.GetComponent<GameData>().prop){
+        //    Debug.Log("Spawn Prop");
+        spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player Hunter", transform.position, transform.rotation);
+        //} else {
+        //    Debug.Log("Spawn Hunter");
+        //    spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player Hunter", transform.position, transform.rotation);
+       // }
         
 
     }

@@ -244,7 +244,9 @@ MonoBehaviour:
   Head: {fileID: 155390351367626784}
   leftHand: {fileID: 130554832663167357}
   rightHand: {fileID: 2680092014737995278}
-  Target: {fileID: 0}
+  CameraController: {fileID: 0}
+  leftHandController: {fileID: 0}
+  rightHandController: {fileID: 0}
 --- !u!114 &1470710920145951177
 MonoBehaviour:
   m_ObjectHideFlags: 0
