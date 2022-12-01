@@ -11,11 +11,13 @@ public class PhotonNetworkManage : MonoBehaviourPunCallbacks
     {
         ConnectToServer();
     }
+
     private void ConnectToServer()
     {
         PhotonNetwork.ConnectUsingSettings();
         Debug.Log("Try Connect To Server");
     }
+
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connected To server");
@@ -26,12 +28,14 @@ public class PhotonNetworkManage : MonoBehaviourPunCallbacks
         roomOptions.IsOpen = true;
         PhotonNetwork.JoinOrCreateRoom("Room1", roomOptions, TypedLobby.Default);
     }
+
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined Room");
         base.OnJoinedRoom();
 
     }
+    
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log("A new player joined the room");
