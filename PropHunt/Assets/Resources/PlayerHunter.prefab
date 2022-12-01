@@ -1045,6 +1045,8 @@ GameObject:
   - component: {fileID: 6916312004311350677}
   - component: {fileID: 6916312004311350676}
   - component: {fileID: 6916312004311350679}
+  - component: {fileID: 7821547102037613418}
+  - component: {fileID: 6530030439964504840}
   m_Layer: 0
   m_Name: PlayerHunter
   m_TagString: Untagged
@@ -1195,6 +1197,43 @@ MonoBehaviour:
   jumpActionReference: {fileID: -6845879089564033237, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   jumpForce: 500
   rb: {fileID: 6916312005577245039}
+--- !u!114 &7821547102037613418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6916312004311350696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e1117714cb9964baf4e17d0ac66daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Head: {fileID: 6916312005116650754}
+  leftHand: {fileID: 6916312004840343246}
+  rightHand: {fileID: 6916312003632123310}
+--- !u!114 &6530030439964504840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6916312004311350696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6916312004655145078
 GameObject:
   m_ObjectHideFlags: 0
