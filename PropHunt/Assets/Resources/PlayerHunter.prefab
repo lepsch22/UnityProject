@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e1117714cb9964baf4e17d0ac66daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Head: {fileID: 6916312005116650754}
+  Head: {fileID: 6916312005577245036}
   leftHand: {fileID: 6916312004840343246}
   rightHand: {fileID: 6916312003632123310}
 --- !u!114 &6530030439964504840

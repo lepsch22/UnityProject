@@ -6,10 +6,22 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
     private GameObject spawnedPlayerPrefab;
 
+    GameObject gamedata;
+
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        spawnedPlayerPrefab = PhotonNetwork.Instantiate("PlayerHunter", transform.position, transform.rotation);
+
+        gamedata = GameObject.Find("GameData");
+
+        if(gamedata.GetComponent<GameData>().prop){
+            Debug.Log("Spawn Prop");
+            spawnedPlayerPrefab = PhotonNetwork.Instantiate("PlayerProp", transform.position, transform.rotation);
+        } else {
+            Debug.Log("Spawn Hunter");
+            spawnedPlayerPrefab = PhotonNetwork.Instantiate("PlayerHunter", transform.position, transform.rotation);
+        }
+        
 
     }
 

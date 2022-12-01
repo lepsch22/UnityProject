@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
+using Photon.Pun;
+
 public class NetworkHunter : MonoBehaviour
 {
     public Transform Head;
     public Transform leftHand;
     public Transform rightHand;
+    private PhotonView photonView;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        photonView = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
