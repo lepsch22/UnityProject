@@ -55139,9 +55139,9 @@ MonoBehaviour:
   networkAddress: localhost
   maxConnections: 100
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 7700081892526392287, guid: ee9af442269491746acb2d4b2e9f37b1, type: 3}
+  playerPrefab: {fileID: 2291672400264253476, guid: ee9af442269491746acb2d4b2e9f37b1, type: 3}
   autoCreatePlayer: 1
-  playerSpawnMethod: 0
+  playerSpawnMethod: 1
   spawnPrefabs: []
   timeInterpolationGui: 0
 --- !u!4 &1517739167 stripped

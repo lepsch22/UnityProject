@@ -1045,14 +1045,15 @@ GameObject:
   - component: {fileID: 6916312004311350677}
   - component: {fileID: 6916312004311350676}
   - component: {fileID: 6916312004311350679}
-  - component: {fileID: 6916312004311350678}
+  - component: {fileID: -8722847684025621928}
+  - component: {fileID: -6067649382440156328}
   m_Layer: 0
   m_Name: PlayerHunter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6916312004311350697
 Transform:
   m_ObjectHideFlags: 0
@@ -1196,7 +1197,7 @@ MonoBehaviour:
   jumpActionReference: {fileID: -6845879089564033237, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   jumpForce: 500
   rb: {fileID: 6916312005577245039}
---- !u!114 &6916312004311350678
+--- !u!114 &-8722847684025621928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1213,6 +1214,34 @@ MonoBehaviour:
   serverOnly: 0
   visible: 0
   hasSpawned: 0
+--- !u!114 &-6067649382440156328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6916312004311350696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 6916312004311350697}
+  clientAuthority: 1
+  onlySyncOnChange: 1
+  bufferResetMultiplier: 5
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &6916312004655145078
 GameObject:
   m_ObjectHideFlags: 0

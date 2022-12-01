@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class GetOffThePenjamin : MonoBehaviour
+public class GetOffThePenjamin : NetworkBehaviour
 {
     public GameObject gamedata;
     public bool isProp;
     
-    void Start()
+    public override void OnStartLocalPlayer()
     {
+        if(!isLocalPlayer){return;}
         gamedata = GameObject.Find("GameData");
         isProp = gamedata.GetComponent<GameData>().prop;
         if(isProp)

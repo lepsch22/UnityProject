@@ -1217,14 +1217,14 @@ GameObject:
   - component: {fileID: 4461158640733380941}
   - component: {fileID: 4461158640733380946}
   - component: {fileID: 4461158640733380947}
-  - component: {fileID: 4461158640733380944}
+  - component: {fileID: 794456785208287090}
   m_Layer: 0
   m_Name: PlayerProp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4461158640733380942
 Transform:
   m_ObjectHideFlags: 0
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   jumpActionReference: {fileID: -6845879089564033237, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   jumpForce: 500
   rb: {fileID: 4461158640006890561}
---- !u!114 &4461158640733380944
+--- !u!114 &794456785208287090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
