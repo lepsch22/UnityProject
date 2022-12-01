@@ -13,49 +13,38 @@ public class NetworkHunter : MonoBehaviour
     public GameObject leftHandController;
     public GameObject rightHandController;
     private PhotonView photonView;
-    //public Transform localPlace;
-    //InputDevice leftController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-    // Start is called before the first frame update
     void Start()
     {
         //localPlace = GameObject.Find("Network Player Hunter").transform;
         CameraController = GameObject.Find("Main Camera");
         leftHandController = GameObject.Find("LeftHand Controller");
-        rightHandController = GameObject.Find("rightHand Controller");
+        rightHandController = GameObject.Find("RightHand Controller");
         photonView = GetComponent<PhotonView>();
 
     }
 
-    // Update is called once per frame
     void Update()
     {
+        photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
-            //CameraController = GameObject.Find("Main Camera");
-            Head.transform.position = CameraController.transform.position;
-            Head.transform.rotation = CameraController.transform.rotation;
-            leftHand.position = leftHandController.transform.position;
-            leftHand.rotation = leftHandController.transform.rotation;
-            rightHand.position = rightHand.transform.position;
-            rightHand.rotation = rightHand.transform.rotation;
+            Debug.Log("My View");
+            leftHand.gameObject.SetActive(false);
+            rightHand.gameObject.SetActive(false);
+            Head.gameObject.SetActive(false);
+            MapPosition(leftHand, leftHandController);
+            MapPosition(Head, CameraController);
+            MapPosition(rightHand, rightHandController);
         }
-
-        //MapPosition(Head, XRNode.Head);
-        // MapPosition(leftHand, XRNode.LeftHand);
-        //MapPosition(rightHand, XRNode.RightHand);
-        //Target.transform.position = localPlace.position;
-        //Target.transform.rotation = localPlace.rotation;
-
-
+        if (!photonView.IsMine) {
+            Debug.Log("Not My View");
+        }
     }
-    void MapPosition(Transform target, XRNode node) 
+    void MapPosition(Transform target, GameObject Device) 
     {
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 postion);
 
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion rotation);
-
-        target.position = postion;
-        target.rotation = rotation;
+        target.position = Device.transform.position;
+        target.rotation = Device.transform.rotation;
 
     }
 }

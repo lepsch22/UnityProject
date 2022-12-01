@@ -78129,6 +78129,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 2029893629}
+    - target: {fileID: 5719589158306557158, guid: 22beb2a68f5f2bc46badcf0e73bc30cd, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: -8679921383154817045, guid: fa1dbf3ce607faa4eaf5d6c71e9ccc66, type: 3}
     - target: {fileID: 5719589158799858775, guid: 22beb2a68f5f2bc46badcf0e73bc30cd, type: 3}
       propertyPath: m_Camera
       value: 
