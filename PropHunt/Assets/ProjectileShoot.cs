@@ -66,6 +66,7 @@ public class ProjectileShoot : MonoBehaviour
         unityGameObjects.Add(projectileObj);
         //listcounter++;
     }
+    
     //public int listcounter = 0;
     private void Update()
     {

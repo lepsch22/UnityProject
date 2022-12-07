@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Hands
+  - PlayerProp
   layers:
   - Default
   - TransparentFX
