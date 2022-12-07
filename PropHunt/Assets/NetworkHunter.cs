@@ -16,12 +16,12 @@ public class NetworkHunter : MonoBehaviour
     void Start()
     {
         //localPlace = GameObject.Find("Network Player Hunter").transform;
-        if (photonView.IsMine){
+        //if (photonView.IsMine){
             CameraController = GameObject.Find("Main Camera");
             leftHandController = GameObject.Find("LeftHand Controller");
             rightHandController = GameObject.Find("RightHand Controller");
             photonView = GetComponent<PhotonView>();
-        }
+        //}
 
     }
 
