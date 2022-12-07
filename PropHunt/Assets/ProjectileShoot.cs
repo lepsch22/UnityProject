@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+using Photon.Pun;
 
 
 public class ProjectileShoot : MonoBehaviour
@@ -60,7 +61,7 @@ public class ProjectileShoot : MonoBehaviour
     
     void InstantiatieProjectile(Transform firepoint) 
     {
-        var projectileObj = Instantiate(projectile, firepoint.position, Quaternion.identity) as GameObject;
+        var projectileObj = PhotonNetwork.Instantiate("vfx_ProjectileTut", firepoint.position, Quaternion.identity) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (destination - firepoint.position).normalized * projectileSpeed;
         unityGameObjects.Add(projectileObj);
         //listcounter++;
@@ -87,7 +88,7 @@ public class ProjectileShoot : MonoBehaviour
 
 
                     }
-                    Destroy(unityGameObjects[i]);
+                    PhotonNetwork.Destroy(unityGameObjects[i]);
                     unityGameObjects.RemoveAt(i);
                     //listcounter--;
                 }

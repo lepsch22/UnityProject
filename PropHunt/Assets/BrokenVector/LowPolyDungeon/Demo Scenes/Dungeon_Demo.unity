@@ -78149,6 +78149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerHunterNew
       objectReference: {fileID: 0}
+    - target: {fileID: 5719589159404463813, guid: 22beb2a68f5f2bc46badcf0e73bc30cd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5719589159404463816, guid: 22beb2a68f5f2bc46badcf0e73bc30cd, type: 3}
       propertyPath: m_RootOrder
       value: 11

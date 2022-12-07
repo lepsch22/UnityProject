@@ -193,6 +193,7 @@ Library: lib_burst_generated
 --debug=Full
 --output=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Flow.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.Interaction.Toolkit.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
@@ -206,6 +207,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.Oculus.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Animation.Rigging.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.Demos.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.Internal.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Mirror.Components.dll
@@ -213,19 +215,22 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.CoreUtils.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonRealtime.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\ReadyPlayerMe.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Siccity.GLTFUtility.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Telepathy.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.Utilities.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Registration.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\kcp2k.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.Management.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonChat.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.Interaction.Toolkit.Samples.StarterAssets.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\WebView.dll
@@ -241,11 +246,6 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.MockRuntime.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Subsystem.Registration.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.OculusQuestSupport.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.Demos.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.Utilities.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonChat.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonRealtime.dll
 --assembly-folder=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoGetCSRTrampoline()--89425a97f3f500fa810ad03f0c382542
@@ -458,6 +458,7 @@ Library: lib_burst_generated
 --debug=Full
 --output=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Flow.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.Interaction.Toolkit.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
@@ -471,6 +472,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.Oculus.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Animation.Rigging.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.Demos.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.Internal.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Mirror.Components.dll
@@ -478,19 +480,22 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.CoreUtils.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonRealtime.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\ReadyPlayerMe.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Siccity.GLTFUtility.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Telepathy.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.Utilities.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Registration.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\kcp2k.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.Management.dll
+--root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonChat.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.Interaction.Toolkit.Samples.StarterAssets.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\WebView.dll
@@ -506,11 +511,6 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.MockRuntime.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.Subsystem.Registration.dll
 --root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.OculusQuestSupport.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.Demos.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.Utilities.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonChat.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.dll
---root-assembly=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\PhotonRealtime.dll
 --assembly-folder=C:\Users\lepsc\Documents\GitHub\UnityProject\PropHunt\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoGetCSRTrampoline()--89425a97f3f500fa810ad03f0c382542
