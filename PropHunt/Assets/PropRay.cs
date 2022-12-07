@@ -19,12 +19,12 @@ public class PropRay : MonoBehaviour
     void PropChange(InputAction.CallbackContext ob) {
         if (Physics.Raycast(transform.position, transform.forward, out var hit, Mathf.Infinity, mask))
         {
+
             var obj = hit.collider.gameObject;
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             Debug.Log($"looking at {obj.name}", this);
             Mesh mesh = obj.GetComponent<MeshFilter>().mesh;
             Mesh mesh2 = Instantiate(mesh);
-            Mesh meshCollider = player.GetComponent<MeshCollider>().sharedMesh;
             player.GetComponent<MeshCollider>().sharedMesh = mesh2;
             player.GetComponent<MeshFilter>().mesh = mesh2;
             player.GetComponent<MeshRenderer>().material = obj.GetComponent<MeshRenderer>().material;
