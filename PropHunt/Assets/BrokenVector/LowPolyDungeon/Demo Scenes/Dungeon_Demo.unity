@@ -44923,7 +44923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e513f7f6ecfd8294898b6c1874f4685b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5719589159404463813, guid: 22beb2a68f5f2bc46badcf0e73bc30cd, type: 3}
+  playerHunter: {fileID: 5719589159404463813, guid: 22beb2a68f5f2bc46badcf0e73bc30cd, type: 3}
   playerProp: {fileID: 123686065108862593, guid: 7a30813c698bed9499b04b2cba223392, type: 3}
 --- !u!1001 &1227195644
 PrefabInstance:

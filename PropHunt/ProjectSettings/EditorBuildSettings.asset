@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/BrokenVector/LowPolyDungeon/Demo Scenes/Main Menu.unity
     guid: 00c289eed8ea64c4aaff3608d1534224
   - enabled: 1
