@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+
 
 public class ProjectleTut : MonoBehaviour
 {
@@ -23,6 +25,16 @@ public class ProjectleTut : MonoBehaviour
             destroyProjectile = true;
             collided = true;
         }
+    }
+    private void Start()
+    {
+        Invoke("Destroy", 3.0f);
+        
+    }
+    private void OnDestroy()
+    {
+        PhotonNetwork.Destroy(gameObject);
+
     }
 
 }

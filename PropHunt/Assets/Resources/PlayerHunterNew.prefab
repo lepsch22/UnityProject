@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 5719589158306557154}
   m_Layer: 0
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1761,7 +1761,7 @@ GameObject:
   - component: {fileID: 5719589158799858797}
   m_Layer: 5
   m_Name: Menu Canvas
-  m_TagString: Untagged
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2209,7 +2209,7 @@ GameObject:
   - component: {fileID: 5719589159404463666}
   m_Layer: 0
   m_Name: PlayerHunterNew
-  m_TagString: Untagged
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2385,7 +2385,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5719589159404463667
 MonoBehaviour:
   m_ObjectHideFlags: 0
