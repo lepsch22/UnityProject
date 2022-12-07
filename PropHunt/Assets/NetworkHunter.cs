@@ -30,7 +30,7 @@ public class NetworkHunter : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
-            Debug.Log("My View");
+            //Debug.Log("My View");
             leftHand.gameObject.SetActive(false);
             rightHand.gameObject.SetActive(false);
             Head.gameObject.SetActive(false);
