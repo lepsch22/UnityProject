@@ -9,8 +9,10 @@ public class PropRay : MonoBehaviour
     //[SerializeField] private float jumpForce = 500.0f;
     //public GameObject rb;
 
+    public bool propChanged;
     public LayerMask mask;
     public GameObject player;
+
     void Start()
     {
         triggerActionReference.action.performed += PropChange;
@@ -30,6 +32,7 @@ public class PropRay : MonoBehaviour
             player.GetComponent<MeshRenderer>().material = obj.GetComponent<MeshRenderer>().material;
             player.transform.rotation = obj.transform.rotation;
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z);
+            propChanged = true;
         }
         else
         {

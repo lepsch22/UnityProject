@@ -42,11 +42,21 @@ public class NetworkProp : MonoBehaviour
             //MapPosition(rightHand, rightHandController);
             MapPosition(propLocationTransform, XROrigin);
         }
+        if(rightHandController.GetComponent<PropRay>().propChanged){
+            var obj = XROrigin;
+            Mesh mesh = obj.GetComponent<MeshFilter>().mesh;
+            Mesh mesh2 = Instantiate(mesh);
+            propLocationObject.GetComponent<MeshCollider>().sharedMesh = mesh2;
+            propLocationObject.GetComponent<MeshFilter>().mesh = mesh2;
+            propLocationObject.GetComponent<MeshRenderer>().material = obj.GetComponent<MeshRenderer>().material;
+            propLocationObject.transform.rotation = obj.transform.rotation;
+            propLocationObject.transform.position = new Vector3(propLocationObject.transform.position.x, propLocationObject.transform.position.y + 0.5f, propLocationObject.transform.position.z);
+            rightHandController.GetComponent<PropRay>().propChanged = false;
+        }
 
     }
     void MapPosition(Transform target, GameObject Device)
     {
-
         target.position = Device.transform.position;
         target.rotation = Device.transform.rotation;
 
