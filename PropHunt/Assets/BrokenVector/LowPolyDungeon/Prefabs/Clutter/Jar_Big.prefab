@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5575272835648200141}
   m_Layer: 0
   m_Name: Jar_Big
-  m_TagString: Untagged
+  m_TagString: Jar_Big
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

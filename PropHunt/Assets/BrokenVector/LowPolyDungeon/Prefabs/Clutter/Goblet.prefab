@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4673438754852879255}
   m_Layer: 0
   m_Name: Goblet
-  m_TagString: Untagged
+  m_TagString: Goblet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
