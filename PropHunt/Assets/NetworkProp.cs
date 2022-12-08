@@ -34,6 +34,7 @@ public class NetworkProp : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
+            propLocationObject.SetActive(false);
             if (XROrigin.GetComponent<IsPlayerGettingHit>().HPIntVal < 100) {
                 XROrigin.GetComponent<IsPlayerGettingHit>().isMyNetworkedPlayerDead = true;
                 PhotonNetwork.Destroy(gameObject);
@@ -75,7 +76,7 @@ public class NetworkProp : MonoBehaviour
         Mesh mesh = obj.GetComponent<MeshFilter>().mesh;
         Debug.Log("Send/RecieverRPC");
         propLocationObject.GetComponent<MeshFilter>().mesh = mesh;
-        propLocationObject.GetComponent<MeshRenderer>().material = obj.GetComponent<MeshRenderer>().material;
+        propLocationObject.GetComponent<MeshRenderer>().materials = obj.GetComponent<MeshRenderer>().materials;
         propLocationObject.transform.rotation = obj.transform.rotation;
         propLocationObject.transform.position = new Vector3(propLocationObject.transform.position.x, propLocationObject.transform.position.y + 0.5f, propLocationObject.transform.position.z);
     }
