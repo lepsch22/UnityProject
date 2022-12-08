@@ -9,6 +9,7 @@ TagManager:
   - PlayerProp
   - Chair
   - Table_Big
+  - PlayerPropNetworked
   layers:
   - Default
   - TransparentFX

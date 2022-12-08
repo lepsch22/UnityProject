@@ -17,6 +17,7 @@ public class PropRay : MonoBehaviour
     void Start()
     {
         triggerActionReference.action.performed += PropChange;
+        collidedObject = GameObject.Find("Chair");
 
     }
     void PropChange(InputAction.CallbackContext ob) {

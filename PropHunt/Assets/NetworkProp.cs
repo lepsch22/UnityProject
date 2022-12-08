@@ -17,24 +17,35 @@ public class NetworkProp : MonoBehaviour
     public GameObject XROrigin;
     public GameObject collidedObject;
     private PhotonView photonView;
+    public GameObject[] players;
+    
     void Start()
     {
-        //localPlace = GameObject.Find("Network Player Hunter").transform;
-        //if (photonView.IsMine){
-        //CameraController = GameObject.Find("Main Camera");
-        //leftHandController = GameObject.Find("LeftHand Controller");
         rightHandController = GameObject.Find("RightHand Controller");
         XROrigin = GameObject.Find("PlayerPropNew(Clone)");
         photonView = GetComponent<PhotonView>();
-        //}
-
+        /*
+        if(photonView.IsMine){
+            players = GameObject.FindGameObjectsWithTag("PlayerPropNetworked");
+            foreach(GameObject obj in players){
+                if(!obj.GetPhotonView().IsMine){
+                var objToTurnInto = GameObject.FindWithTag(obj.GetComponent<NetworkProp>().currMesh);
+                obj.GetComponentInChildren<MeshFilter>().mesh = objToTurnInto.GetComponent<MeshFilter>().mesh;
+                obj.GetComponentInChildren<MeshRenderer>().materials = objToTurnInto.GetComponent<MeshRenderer>().materials;          
+                }
+            }
+        }
+        */
     }
+    
 
     void Update()
     {
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
+            rightHandController = GameObject.Find("RightHand Controller");
+            XROrigin = GameObject.Find("PlayerPropNew(Clone)");
             propLocationObject.SetActive(false);
             if (XROrigin.GetComponent<IsPlayerGettingHit>().HPIntVal < 100) {
                 XROrigin.GetComponent<IsPlayerGettingHit>().isMyNetworkedPlayerDead = true;
@@ -69,7 +80,7 @@ public class NetworkProp : MonoBehaviour
     }
 
     [PunRPC]
-    void ChangeMeshRPC(string meshTag)
+    public void ChangeMeshRPC(string meshTag)
     {
         // Change the mesh on all clients (except the one that called the RPC method).
         var obj = GameObject.FindWithTag(meshTag);
@@ -78,7 +89,7 @@ public class NetworkProp : MonoBehaviour
         currMesh = meshTag;
         propLocationObject.GetComponent<MeshFilter>().mesh = mesh;
         propLocationObject.GetComponent<MeshRenderer>().materials = obj.GetComponent<MeshRenderer>().materials;
-        propLocationObject.transform.rotation = obj.transform.rotation;
-        propLocationObject.transform.position = new Vector3(propLocationObject.transform.position.x, propLocationObject.transform.position.y + 0.5f, propLocationObject.transform.position.z);
+        //propLocationObject.transform.rotation = obj.transform.rotation;
+        //propLocationObject.transform.position = new Vector3(propLocationObject.transform.position.x, propLocationObject.transform.position.y + 0.5f, propLocationObject.transform.position.z);
     }
 }

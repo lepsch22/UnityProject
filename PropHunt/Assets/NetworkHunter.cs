@@ -32,6 +32,8 @@ public class NetworkHunter : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
+            //CameraController = GameObject.Find("Main Camera");
+            //leftHandController = GameObject.Find("LeftHand Controller");
             //Debug.Log("My View");
             leftHand.gameObject.SetActive(false);
             rightHand.gameObject.SetActive(false);
@@ -43,9 +45,12 @@ public class NetworkHunter : MonoBehaviour
         if (!photonView.IsMine) {
             //Debug.Log("Not My View");
         }
-        if (rightHandController.GetComponent<ProjectileShoot>().HPIntVal < 0) {
-            rightHandController.GetComponent<ProjectileShoot>().isMyNetworkedPlayerDead = true;
-            PhotonNetwork.Destroy(gameObject);
+        if(photonView.IsMine){
+            rightHandController = GameObject.Find("RightHand Controller");
+            if (rightHandController.GetComponent<ProjectileShoot>().HPIntVal < 0) {
+                rightHandController.GetComponent<ProjectileShoot>().isMyNetworkedPlayerDead = true;
+                PhotonNetwork.Destroy(gameObject);
+        }
 
             
         }

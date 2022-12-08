@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 6646358680665296369}
   m_Layer: 0
   m_Name: Network Player Prop
-  m_TagString: PlayerProp
+  m_TagString: PlayerPropNetworked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +205,7 @@ MonoBehaviour:
   propLocationObject: {fileID: 2225533321522230115}
   XROrigin: {fileID: 0}
   collidedObject: {fileID: 0}
+  players: []
 --- !u!114 &3946276179847431093
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,8 +4,11 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
+
+
 public class PhotonNetworkManage : MonoBehaviourPunCallbacks
 {
+    public GameObject spawnedPlayerPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,8 +42,19 @@ public class PhotonNetworkManage : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log("A new player joined the room");
+        //string meshTag = spawnedPlayerPrefab.GetComponent<NetworkProp>().currMesh;
+        spawnedPlayerPrefab = GetComponent<NetworkPlayerSpawner>().spawnedPlayerPrefab;
+        spawnedPlayerPrefab.GetComponent<NetworkProp>().ChangeMesh();
         base.OnPlayerEnteredRoom(newPlayer);
+   
+
     }
+    /*
+    void ChangeMeshRPC(string meshTag)
+    {
+       spawnedPlayerPrefab.GetComponent<NetworkProp>().ChangeMeshRPC(meshTag);
+    }
+    */
 
 
 
