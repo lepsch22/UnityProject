@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using System;
 
 
 public class ProjectleTut : MonoBehaviour
@@ -9,6 +10,7 @@ public class ProjectleTut : MonoBehaviour
     private bool collided;
     public bool hitNonPlayerProp = false;
     public bool destroyProjectile = false;
+    public GameObject collidedObject;
     private void OnCollisionEnter(Collision co)
     {
         if (co.gameObject.tag != "Bullet" && co.gameObject.tag != "Player" && !collided && co.gameObject.tag != "Hands")
@@ -19,6 +21,12 @@ public class ProjectleTut : MonoBehaviour
                 Debug.Log("Take Damage");
                 hitNonPlayerProp = true;
             }
+            if (co.gameObject.tag == "PlayerProp") {
+                Debug.Log("Hit Player Prop");
+                //hitNonPlayerProp = false;
+                collidedObject = co.gameObject;
+            }
+
             Debug.Log(co.gameObject.layer.ToString());
             Debug.Log(co.gameObject.name);
             Debug.Log(co.gameObject.tag);
@@ -28,7 +36,14 @@ public class ProjectleTut : MonoBehaviour
     }
     private void Start()
     {
-        Invoke("Destroy", 3.0f);
+        try
+        {
+            Invoke("Destroy", 3.0f);
+        }
+        catch (Exception e) {
+            print("Projectile already deleted.");
+
+        }
         
     }
     private void OnDestroy()

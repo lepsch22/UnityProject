@@ -12,7 +12,9 @@ public class ProjectileShoot : MonoBehaviour
 {
     [SerializeField] private InputActionReference triggerActionReference;
     [SerializeField] TextMeshProUGUI m_Object;
-
+    [SerializeField] GameObject XROrigin;
+    public int HPIntVal = 100;
+    public bool isMyNetworkedPlayerDead;
     public Transform RHfirepoint;
     public GameObject projectile;
     public XRRayInteractor rayInteractor;
@@ -26,30 +28,18 @@ public class ProjectileShoot : MonoBehaviour
         triggerActionReference.action.performed += ShootProjectile;
 
     }
-    /*
-    public void OnHoverEntered(HoverEnterEventArgs args) 
-    {
-        Debug.Log($"{args.interactorObject} hovered over {args.interactableObject}", this);
-    }
-    public void OnHoverExited(HoverExitEventArgs args)
-    {
-        Debug.Log($"{args.interactorObject} stopped hovering over {args.interactableObject}", this);
-    }   */
+
 
 
     private void ShootProjectile(InputAction.CallbackContext ob)
     {
-        //Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
         RaycastResult res;
         if (!rayInteractor.TryGetCurrentUIRaycastResult(out res))
         {
-            //cursor.transform.position = res.worldPosition;
 
             if (Physics.Raycast(RHfirepoint.transform.position, RHfirepoint.transform.forward, out hit, Mathf.Infinity))//If ray hits any collider set destination to hit.point
                 destination = hit.point;
-            //else
-            //destination = ray.GetPoint(1000);
             InstantiatieProjectile(RHfirepoint);
         }
         else
@@ -64,12 +54,13 @@ public class ProjectileShoot : MonoBehaviour
         var projectileObj = PhotonNetwork.Instantiate("vfx_ProjectileTut", firepoint.position, Quaternion.identity) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (destination - firepoint.position).normalized * projectileSpeed;
         unityGameObjects.Add(projectileObj);
-        //listcounter++;
     }
     
-    //public int listcounter = 0;
     private void Update()
     {
+        if (isMyNetworkedPlayerDead) {
+            Destroy(XROrigin);
+        }
         if (unityGameObjects.Count > 0)
         {
             for (int i = 0; i < unityGameObjects.Count; i++)
@@ -81,7 +72,8 @@ public class ProjectileShoot : MonoBehaviour
 
                         int temp;
                         int.TryParse(m_Object.text, out temp);
-                        temp--;
+                        temp = temp - 3;
+                        HPIntVal = temp;
                         Debug.Log("Test String " + temp.ToString());
 
                         m_Object.text = temp.ToString();
@@ -91,7 +83,6 @@ public class ProjectileShoot : MonoBehaviour
                     }
                     PhotonNetwork.Destroy(unityGameObjects[i]);
                     unityGameObjects.RemoveAt(i);
-                    //listcounter--;
                 }
 
         }

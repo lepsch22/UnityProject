@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 506779200850457704}
   - component: {fileID: 9096804015897540153}
   - component: {fileID: 8259733192244838811}
+  - component: {fileID: 9221556326525665864}
   m_Layer: 0
   m_Name: PlayerPropNew
   m_TagString: PlayerProp
@@ -395,6 +396,21 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &9221556326525665864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123686065108862593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf02e6974c1adb4dbf8588f2d000b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMyNetworkedPlayerDead: 0
+  HPIntVal: 100
+  m_Object: {fileID: 5383072722046441138}
 --- !u!1 &237408038581736884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1045,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   player: {fileID: 123686065108862593}
+  collidedObject: {fileID: 0}
 --- !u!1 &1868881637234943487
 GameObject:
   m_ObjectHideFlags: 0

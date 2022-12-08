@@ -14,6 +14,7 @@ public class NetworkProp : MonoBehaviour
     public GameObject rightHandController;
     public GameObject propLocationObject;
     public GameObject XROrigin;
+    public GameObject collidedObject;
     private PhotonView photonView;
     void Start()
     {
@@ -33,26 +34,22 @@ public class NetworkProp : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
-            //Debug.Log("My View");
-            //leftHand.gameObject.SetActive(false);
-            //rightHand.gameObject.SetActive(false);
-            //Head.gameObject.SetActive(false);
-            //MapPosition(leftHand, leftHandController);
-            //MapPosition(Head, CameraController);
-            //MapPosition(rightHand, rightHandController);
+            if (XROrigin.GetComponent<IsPlayerGettingHit>().HPIntVal < 100) {
+                XROrigin.GetComponent<IsPlayerGettingHit>().isMyNetworkedPlayerDead = true;
+                PhotonNetwork.Destroy(gameObject);
+                
+            }
+
             MapPosition(propLocationTransform, XROrigin);
+            if (rightHandController.GetComponent<PropRay>().propChanged)
+            {
+                //collidedObject = rightHandController.GetComponent<PropRay>().collidedObject;
+                ChangeMesh();
+                rightHandController.GetComponent<PropRay>().propChanged = false;
+            }
         }
-        if(rightHandController.GetComponent<PropRay>().propChanged){
-            var obj = XROrigin;
-            Mesh mesh = obj.GetComponent<MeshFilter>().mesh;
-            Mesh mesh2 = Instantiate(mesh);
-            propLocationObject.GetComponent<MeshCollider>().sharedMesh = mesh2;
-            propLocationObject.GetComponent<MeshFilter>().mesh = mesh2;
-            propLocationObject.GetComponent<MeshRenderer>().material = obj.GetComponent<MeshRenderer>().material;
-            propLocationObject.transform.rotation = obj.transform.rotation;
-            propLocationObject.transform.position = new Vector3(propLocationObject.transform.position.x, propLocationObject.transform.position.y + 0.5f, propLocationObject.transform.position.z);
-            rightHandController.GetComponent<PropRay>().propChanged = false;
-        }
+
+
 
     }
     void MapPosition(Transform target, GameObject Device)
@@ -60,5 +57,25 @@ public class NetworkProp : MonoBehaviour
         target.position = Device.transform.position;
         target.rotation = Device.transform.rotation;
 
+    }
+    public void ChangeMesh()
+    {
+        // Call the RPC method on all other clients.
+        photonView.RPC("ChangeMeshRPC", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void ChangeMeshRPC()
+    {
+        // Change the mesh on all clients (except the one that called the RPC method).
+
+
+        var obj = XROrigin;
+        Mesh mesh = obj.GetComponent<MeshFilter>().mesh;
+        Debug.Log("Send/RecieverRPC");
+        propLocationObject.GetComponent<MeshFilter>().mesh = mesh;
+        propLocationObject.GetComponent<MeshRenderer>().material = obj.GetComponent<MeshRenderer>().material;
+        propLocationObject.transform.rotation = obj.transform.rotation;
+        propLocationObject.transform.position = new Vector3(propLocationObject.transform.position.x, propLocationObject.transform.position.y + 0.5f, propLocationObject.transform.position.z);
     }
 }

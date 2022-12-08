@@ -12,6 +12,7 @@ public class PropRay : MonoBehaviour
     public bool propChanged;
     public LayerMask mask;
     public GameObject player;
+    public GameObject collidedObject;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class PropRay : MonoBehaviour
             Mesh mesh2 = Instantiate(mesh);
             player.GetComponent<MeshCollider>().sharedMesh = mesh2;
             player.GetComponent<MeshFilter>().mesh = mesh2;
-            player.GetComponent<MeshRenderer>().material = obj.GetComponent<MeshRenderer>().material;
+            player.GetComponent<MeshRenderer>().materials = obj.GetComponent<MeshRenderer>().materials;
             player.transform.rotation = obj.transform.rotation;
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z);
             propChanged = true;

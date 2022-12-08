@@ -22,7 +22,7 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
             spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player Prop", transform.position, transform.rotation);
 
         } else {
-            //Debug.Log("Spawn Hunter");
+            Debug.Log("Spawn Hunter");
             spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player Hunter", transform.position, transform.rotation);
             Instantiate(playerHunter, transform.position, transform.rotation);
          }

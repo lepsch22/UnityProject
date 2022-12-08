@@ -13,10 +13,12 @@ public class NetworkHunter : MonoBehaviour
     public GameObject leftHandController;
     public GameObject rightHandController;
     private PhotonView photonView;
+    private GameObject XROrigin;
     void Start()
     {
         //localPlace = GameObject.Find("Network Player Hunter").transform;
         //if (photonView.IsMine){
+            //XROrigin = GameObject.Find("PlayerHunterNew");
             CameraController = GameObject.Find("Main Camera");
             leftHandController = GameObject.Find("LeftHand Controller");
             rightHandController = GameObject.Find("RightHand Controller");
@@ -39,7 +41,13 @@ public class NetworkHunter : MonoBehaviour
             MapPosition(rightHand, rightHandController);
         }
         if (!photonView.IsMine) {
-            Debug.Log("Not My View");
+            //Debug.Log("Not My View");
+        }
+        if (rightHandController.GetComponent<ProjectileShoot>().HPIntVal < 0) {
+            rightHandController.GetComponent<ProjectileShoot>().isMyNetworkedPlayerDead = true;
+            PhotonNetwork.Destroy(gameObject);
+
+            
         }
     }
     void MapPosition(Transform target, GameObject Device) 

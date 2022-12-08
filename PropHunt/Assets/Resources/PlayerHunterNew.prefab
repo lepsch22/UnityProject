@@ -731,6 +731,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerActionReference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_Object: {fileID: 5719589159038565358}
+  XROrigin: {fileID: 5719589159404463813}
+  HPIntVal: 100
+  isMyNetworkedPlayerDead: 0
   RHfirepoint: {fileID: 5719589158079765366}
   projectile: {fileID: 1979709230727262631, guid: 0cfcd9c31433b0747be6eb0b92378df2, type: 3}
   rayInteractor: {fileID: 5719589158079765370}
@@ -2431,6 +2434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d971baebacaa245843d203f4ab061d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  E: {fileID: 0}
 --- !u!1 &5719589159697275262
 GameObject:
   m_ObjectHideFlags: 0

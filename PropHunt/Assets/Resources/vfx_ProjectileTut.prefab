@@ -4968,6 +4968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitNonPlayerProp: 0
   destroyProjectile: 0
+  collidedObject: {fileID: 0}
 --- !u!114 &1594649554640593930
 MonoBehaviour:
   m_ObjectHideFlags: 0
