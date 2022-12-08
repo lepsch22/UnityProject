@@ -24,6 +24,7 @@ public class PropRay : MonoBehaviour
         {
 
             var obj = hit.collider.gameObject;
+            collidedObject = obj;
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             Debug.Log($"looking at {obj.name}", this);
             Mesh mesh = obj.GetComponent<MeshFilter>().mesh;

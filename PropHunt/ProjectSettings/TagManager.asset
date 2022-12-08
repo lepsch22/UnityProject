@@ -7,6 +7,8 @@ TagManager:
   - Bullet
   - Hands
   - PlayerProp
+  - Chair
+  - Table_Big
   layers:
   - Default
   - TransparentFX

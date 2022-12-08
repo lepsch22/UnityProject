@@ -43,7 +43,6 @@ public class NetworkProp : MonoBehaviour
             MapPosition(propLocationTransform, XROrigin);
             if (rightHandController.GetComponent<PropRay>().propChanged)
             {
-                //collidedObject = rightHandController.GetComponent<PropRay>().collidedObject;
                 ChangeMesh();
                 rightHandController.GetComponent<PropRay>().propChanged = false;
             }
@@ -61,16 +60,18 @@ public class NetworkProp : MonoBehaviour
     public void ChangeMesh()
     {
         // Call the RPC method on all other clients.
-        photonView.RPC("ChangeMeshRPC", RpcTarget.All);
+        collidedObject = rightHandController.GetComponent<PropRay>().collidedObject;
+        string meshTag = collidedObject.tag;
+        Debug.Log("Collided Mesh Tag" + meshTag);
+
+        photonView.RPC("ChangeMeshRPC", RpcTarget.All,meshTag);
     }
 
     [PunRPC]
-    void ChangeMeshRPC()
+    void ChangeMeshRPC(string meshTag)
     {
         // Change the mesh on all clients (except the one that called the RPC method).
-
-
-        var obj = XROrigin;
+        var obj = GameObject.FindWithTag(meshTag);
         Mesh mesh = obj.GetComponent<MeshFilter>().mesh;
         Debug.Log("Send/RecieverRPC");
         propLocationObject.GetComponent<MeshFilter>().mesh = mesh;
