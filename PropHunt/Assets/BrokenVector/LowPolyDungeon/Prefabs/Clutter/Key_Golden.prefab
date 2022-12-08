@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7447022692855013306}
   m_Layer: 0
   m_Name: Key_Golden
-  m_TagString: Untagged
+  m_TagString: Key_Golden
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 324539211475530278}
   m_Layer: 0
   m_Name: Carpet_Green
-  m_TagString: Untagged
+  m_TagString: Carpet_Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

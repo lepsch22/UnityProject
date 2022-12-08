@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6172961393258283423}
   m_Layer: 0
   m_Name: Bowl_Full
-  m_TagString: Untagged
+  m_TagString: Bowl_Full
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

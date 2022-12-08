@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8528820825029984909}
   m_Layer: 0
   m_Name: Stool_square
-  m_TagString: Untagged
+  m_TagString: Stool_square
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

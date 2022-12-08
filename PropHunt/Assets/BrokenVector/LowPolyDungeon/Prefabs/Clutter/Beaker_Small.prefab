@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7400456941558438677}
   m_Layer: 0
   m_Name: Beaker_Small
-  m_TagString: Untagged
+  m_TagString: Beaker_Small
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

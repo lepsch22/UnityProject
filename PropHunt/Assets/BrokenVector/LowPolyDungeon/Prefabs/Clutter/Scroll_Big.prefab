@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2640387059949778450}
   m_Layer: 0
   m_Name: Scroll_Big
-  m_TagString: Untagged
+  m_TagString: Scroll_Big
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

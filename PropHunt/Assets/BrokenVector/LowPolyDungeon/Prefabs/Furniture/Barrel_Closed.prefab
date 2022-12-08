@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2317576605586580695}
   m_Layer: 0
   m_Name: Barrel_Closed
-  m_TagString: Untagged
+  m_TagString: Barrel_Closed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
