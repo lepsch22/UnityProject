@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9007913389052966980}
   m_Layer: 0
   m_Name: CoatHook
-  m_TagString: Untagged
+  m_TagString: CoatHook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

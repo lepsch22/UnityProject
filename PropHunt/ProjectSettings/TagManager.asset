@@ -86,6 +86,29 @@ TagManager:
   - Sword
   - Tree_Branch
   - Wineglass
+  - Amphora_Stand
+  - Banner
+  - Barrel_Big
+  - Barrel_Closed
+  - Barrel_Open
+  - Bench
+  - Carpet_Green
+  - Carpet_Red
+  - Chest
+  - ChestSmall
+  - CoatHook
+  - CoatHook_Full
+  - Desk
+  - Fireplace
+  - Oven
+  - Shelf
+  - Shelf_Wall
+  - Stool_round
+  - Stool_square
+  - Table_Small
+  - Throne
+  - WeaponRack_Big
+  - WeaponRack_Small
   layers:
   - Default
   - TransparentFX
