@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propLocationTransform: {fileID: 315332873559983555}
+  currMesh: 
   rightHandController: {fileID: 0}
   propLocationObject: {fileID: 2225533321522230115}
   XROrigin: {fileID: 0}

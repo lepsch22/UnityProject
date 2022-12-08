@@ -7,6 +7,7 @@ using Photon.Pun;
 public class NetworkProp : MonoBehaviour
 {
     public Transform propLocationTransform;
+    public string currMesh;
     //public Transform leftHand;
     //public Transform rightHand;
     //public GameObject CameraController;
@@ -64,7 +65,6 @@ public class NetworkProp : MonoBehaviour
         collidedObject = rightHandController.GetComponent<PropRay>().collidedObject;
         string meshTag = collidedObject.tag;
         Debug.Log("Collided Mesh Tag" + meshTag);
-
         photonView.RPC("ChangeMeshRPC", RpcTarget.All,meshTag);
     }
 
@@ -75,6 +75,7 @@ public class NetworkProp : MonoBehaviour
         var obj = GameObject.FindWithTag(meshTag);
         Mesh mesh = obj.GetComponent<MeshFilter>().mesh;
         Debug.Log("Send/RecieverRPC");
+        currMesh = meshTag;
         propLocationObject.GetComponent<MeshFilter>().mesh = mesh;
         propLocationObject.GetComponent<MeshRenderer>().materials = obj.GetComponent<MeshRenderer>().materials;
         propLocationObject.transform.rotation = obj.transform.rotation;
