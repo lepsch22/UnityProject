@@ -30,6 +30,8 @@ public class PropRay : MonoBehaviour
             Debug.Log($"looking at {obj.name}", this);
             Mesh mesh = obj.GetComponent<MeshFilter>().mesh;
             Mesh mesh2 = Instantiate(mesh);
+            //player.GetComponent<BoxCollider>().size = obj.GetComponent<BoxCollider>().size;
+            //player.GetComponent<BoxCollider>().center = obj.GetComponent<BoxCollider>().center;
             player.GetComponent<MeshCollider>().sharedMesh = mesh2;
             player.GetComponent<MeshFilter>().mesh = mesh2;
             player.GetComponent<MeshRenderer>().materials = obj.GetComponent<MeshRenderer>().materials;

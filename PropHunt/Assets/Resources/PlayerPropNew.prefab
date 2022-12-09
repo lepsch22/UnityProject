@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 9096804015897540153}
   - component: {fileID: 8259733192244838811}
   - component: {fileID: 9221556326525665864}
+  - component: {fileID: 4679430355492812691}
   m_Layer: 0
   m_Name: PlayerPropNew
   m_TagString: PlayerProp
@@ -411,6 +412,19 @@ MonoBehaviour:
   isMyNetworkedPlayerDead: 0
   HPIntVal: 100
   m_Object: {fileID: 5383072722046441138}
+--- !u!65 &4679430355492812691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123686065108862593}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6833221, y: 1.4726553, z: 0.787776}
+  m_Center: {x: 0, y: 0.73632765, z: -0.0019872487}
 --- !u!1 &237408038581736884
 GameObject:
   m_ObjectHideFlags: 0
