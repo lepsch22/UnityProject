@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class playerController : MonoBehaviour
+public class jumpController : MonoBehaviour
 {
     [SerializeField] private InputActionReference jumpActionReference;
     [SerializeField] private float jumpForce = 500.0f;
@@ -12,7 +12,7 @@ public class playerController : MonoBehaviour
     public GameObject rb;
 
     private bool _isGrounded => Physics.Raycast(
-        new Vector2(rb.transform.position.x,rb.transform.position.y+1f),Vector3.down,3.0f);
+        new Vector2(rb.transform.position.x,rb.transform.position.y+1f),Vector3.down,5.0f);
 
     void Start()
     {

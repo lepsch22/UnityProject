@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 4679430355492812691}
   - component: {fileID: 7839749082755135743}
   - component: {fileID: 6312818790629876142}
+  - component: {fileID: -7431051905069759679}
   m_Layer: 0
   m_Name: PlayerPropNew
   m_TagString: PlayerProp
@@ -454,6 +455,21 @@ MonoBehaviour:
   spawnpoints: []
   E: {fileID: 0}
   SpawnManager: {fileID: 0}
+--- !u!114 &-7431051905069759679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123686065108862593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e31f794b2134c14a9de4a4e57bc82db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpActionReference: {fileID: -6845879089564033237, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  jumpForce: 350
+  rb: {fileID: 123686065108862593}
 --- !u!1 &237408038581736884
 GameObject:
   m_ObjectHideFlags: 0
