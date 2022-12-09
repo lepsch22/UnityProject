@@ -42702,7 +42702,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 868efc6ffdd286f4d992915656e550fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnpoints: []
+  spawnpoints:
+  - {fileID: 432927611}
+  - {fileID: 1036056578}
+  E: {fileID: 0}
+  SpawnManager: {fileID: 0}
 --- !u!4 &1183721097
 Transform:
   m_ObjectHideFlags: 0
@@ -62934,6 +62938,7 @@ Transform:
   - {fileID: 1168447248}
   - {fileID: 1321454388}
   - {fileID: 1463074888}
+  - {fileID: 506466928}
   - {fileID: 1070315600}
   - {fileID: 1739813107}
   - {fileID: 487960809}
@@ -62947,37 +62952,45 @@ Transform:
   - {fileID: 714429819}
   - {fileID: 472566130}
   - {fileID: 1356079726}
+  - {fileID: 760805393}
   - {fileID: 1071337835}
   - {fileID: 2024638579}
   - {fileID: 32760413}
   - {fileID: 1243741639}
   - {fileID: 1967587053}
+  - {fileID: 60544948}
   - {fileID: 264169520}
   - {fileID: 1663592587}
   - {fileID: 148294239}
   - {fileID: 8180605}
   - {fileID: 1455270592}
   - {fileID: 1663759703}
+  - {fileID: 1091882166}
   - {fileID: 1771761443}
   - {fileID: 1331851378}
   - {fileID: 586692160}
+  - {fileID: 1047150629}
   - {fileID: 1714327253}
   - {fileID: 1290358406}
   - {fileID: 1124696580}
+  - {fileID: 689173884}
   - {fileID: 1283655396}
   - {fileID: 590913592}
   - {fileID: 1000876324}
   - {fileID: 2048750139}
+  - {fileID: 1896405987}
   - {fileID: 642176628}
   - {fileID: 895719364}
   - {fileID: 71132080}
   - {fileID: 703181218}
   - {fileID: 758215436}
   - {fileID: 1830931053}
+  - {fileID: 2091161712}
   - {fileID: 864345639}
   - {fileID: 974057050}
-  - {fileID: 689173884}
-  - {fileID: 60544948}
+  - {fileID: 1436958918}
+  - {fileID: 50651322}
+  - {fileID: 2081303610}
   - {fileID: 1480585966}
   - {fileID: 1014679761}
   - {fileID: 2023338486}
@@ -62987,20 +63000,11 @@ Transform:
   - {fileID: 634251880}
   - {fileID: 1316094746}
   - {fileID: 1219256031}
-  - {fileID: 2081303610}
+  - {fileID: 1716767476}
   - {fileID: 1832507331}
   - {fileID: 352209466}
   - {fileID: 537558135}
   - {fileID: 1016350275}
-  - {fileID: 1716767476}
-  - {fileID: 506466928}
-  - {fileID: 760805393}
-  - {fileID: 1896405987}
-  - {fileID: 2091161712}
-  - {fileID: 1091882166}
-  - {fileID: 1436958918}
-  - {fileID: 50651322}
-  - {fileID: 1047150629}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
