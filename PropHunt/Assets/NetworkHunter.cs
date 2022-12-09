@@ -41,6 +41,7 @@ public class NetworkHunter : MonoBehaviour
             MapPosition(leftHand, leftHandController);
             MapPosition(Head, CameraController);
             MapPosition(rightHand, rightHandController);
+            this.transform.position = Head.transform.position;
         }
         if (!photonView.IsMine) {
             //Debug.Log("Not My View");
@@ -50,9 +51,17 @@ public class NetworkHunter : MonoBehaviour
             if (rightHandController.GetComponent<ProjectileShoot>().HPIntVal < 0) {
                 rightHandController.GetComponent<ProjectileShoot>().isMyNetworkedPlayerDead = true;
                 PhotonNetwork.Destroy(gameObject);
+            }  
         }
+        if (photonView.IsMine) {
+            rightHandController = GameObject.Find("RightHand Controller");
+            bool playSound = rightHandController.GetComponent<ProjectileShoot>().playSound;
+            if (playSound) {
+                photonView.RPC("playSoundNetworked", RpcTarget.All);
+            }
+            rightHandController.GetComponent<ProjectileShoot>().playSound = false;
 
-            
+
         }
     }
     void MapPosition(Transform target, GameObject Device) 
@@ -61,5 +70,10 @@ public class NetworkHunter : MonoBehaviour
         target.position = Device.transform.position;
         target.rotation = Device.transform.rotation;
 
+    }
+    [PunRPC]
+    void playSoundNetworked() {
+        Debug.Log("RPC Shoot Projectile");
+        GetComponent<AudioSource>().Play();
     }
 }

@@ -10393,6 +10393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 266672561}
   - component: {fileID: 266672560}
+  - component: {fileID: 266672562}
   m_Layer: 0
   m_Name: BackGround_Music
   m_TagString: Untagged
@@ -10511,6 +10512,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &266672562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266672559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b398782f7d451cb4db4650d9f3e75998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicClipArray:
+  - {fileID: 8300000, guid: 3b00e6ebcff5b4f45bcfd31a984b97c1, type: 3}
+  - {fileID: 8300000, guid: ac2a89f2645b18445a539f8657b6cbfa, type: 3}
+  - {fileID: 8300000, guid: 3dc322bc0c9ffd34d828917ae97f6d72, type: 3}
+  - {fileID: 8300000, guid: 02d6c4bfe4c8d8c47a0e50b251d92cd0, type: 3}
+  - {fileID: 8300000, guid: e49e987eab319234ebd197a0eccd6035, type: 3}
+  - {fileID: 8300000, guid: c53d48db53be6bf4ca8ca156388a237b, type: 3}
+  - {fileID: 8300000, guid: 0a2b3bf9130a51241b2c24af9ad44f12, type: 3}
+  - {fileID: 8300000, guid: 3b53399e71a0cc640adeb5cc76329e8a, type: 3}
+  - {fileID: 8300000, guid: bc80840cbfed81d4f9e0fd448c799e4f, type: 3}
+  - {fileID: 8300000, guid: c4a035bb3c940874ea52401c75f3afde, type: 3}
+  - {fileID: 8300000, guid: b418041acdc445a4784c7de99fe2897a, type: 3}
+  - {fileID: 8300000, guid: 2e906f9022c86ef49b477abe32e23f6e, type: 3}
+  - {fileID: 8300000, guid: 992c3f7388674454e9a2fbdf145336f6, type: 3}
+  - {fileID: 8300000, guid: 9222dc638fafb1e45b0e9d5594e604ab, type: 3}
+  - {fileID: 8300000, guid: b6af9f7a9bee6754e9ff6cff9a07e6f2, type: 3}
+  rareClipArray:
+  - {fileID: 8300000, guid: 62a0b3aaa1435b344b6f6b7380dbd072, type: 3}
+  - {fileID: 8300000, guid: d9433b77c77680d488cc805781020660, type: 3}
+  - {fileID: 8300000, guid: b672ea6ba5b166d468308db32cc67d20, type: 3}
+  - {fileID: 8300000, guid: 636a4ae434c6b26489c561ba7ec76f74, type: 3}
+  - {fileID: 8300000, guid: a8f28d0e0a7430a4c902bcc49652d56a, type: 3}
+  hyperRareArray:
+  - {fileID: 8300000, guid: 3a3b6a891fda115478b413a8809825f5, type: 3}
+  - {fileID: 8300000, guid: a0dd6659d4e0ce647b3cf02cd7989a40, type: 3}
+  - {fileID: 8300000, guid: 6943c492ca4ab184eb333522324a8028, type: 3}
 --- !u!1001 &272157662
 PrefabInstance:
   m_ObjectHideFlags: 0

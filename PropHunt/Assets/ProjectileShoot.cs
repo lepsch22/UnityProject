@@ -15,6 +15,7 @@ public class ProjectileShoot : MonoBehaviour
     [SerializeField] GameObject XROrigin;
     public int HPIntVal = 100;
     public bool isMyNetworkedPlayerDead;
+    public bool playSound = false;
     public Transform RHfirepoint;
     public GameObject projectile;
     public XRRayInteractor rayInteractor;
@@ -51,7 +52,8 @@ public class ProjectileShoot : MonoBehaviour
     
     void InstantiatieProjectile(Transform firepoint) 
     {
-        GetComponent<AudioSource>().Play();
+        //GetComponent<AudioSource>().Play();
+        playSound = true;
         var projectileObj = PhotonNetwork.Instantiate("vfx_ProjectileTut", firepoint.position, Quaternion.identity) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (destination - firepoint.position).normalized * projectileSpeed;
         unityGameObjects.Add(projectileObj);
