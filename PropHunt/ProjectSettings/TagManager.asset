@@ -109,6 +109,7 @@ TagManager:
   - Throne
   - WeaponRack_Big
   - WeaponRack_Small
+  - PlayerPropNetworked
   layers:
   - Default
   - TransparentFX
@@ -118,7 +119,7 @@ TagManager:
   - UI
   - whatIsGround
   - PropTransform
-  - 
+  - PlayerHunter
   - 
   - 
   - 

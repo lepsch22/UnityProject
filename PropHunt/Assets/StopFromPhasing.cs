@@ -17,9 +17,6 @@ public class StopFromPhasing : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision co) {
-        gameObject.transform.position = previousPosition.position;
-
-
-        
+        gameObject.transform.position = previousPosition.position;     
     }
 }

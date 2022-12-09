@@ -11,10 +11,12 @@ public class ProjectleTut : MonoBehaviour
     public bool hitNonPlayerProp = false;
     public bool destroyProjectile = false;
     public GameObject collidedObject;
+
     private void OnCollisionEnter(Collision co)
     {
         if (co.gameObject.tag != "Bullet" && co.gameObject.tag != "Player" && !collided && co.gameObject.tag != "Hands")
         {
+            //yield WaitForSeconds(0.25);
             //destroyProjectile = true;
             if (co.gameObject.layer.ToString().Equals("7"))
             {
@@ -36,6 +38,7 @@ public class ProjectleTut : MonoBehaviour
     }
     private void Start()
     {
+        Physics.IgnoreLayerCollision(8, 8);
         try
         {
             Invoke("Destroy", 3.0f);

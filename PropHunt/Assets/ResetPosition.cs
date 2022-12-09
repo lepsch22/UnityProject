@@ -8,6 +8,7 @@ public class ResetPosition : MonoBehaviour
     public GameObject E;
 
     void Start(){
+        Physics.IgnoreLayerCollision(8, 8);
         E = GameObject.Find("EventSystem");
     }
 

@@ -51,6 +51,7 @@ public class ProjectileShoot : MonoBehaviour
     
     void InstantiatieProjectile(Transform firepoint) 
     {
+        GetComponent<AudioSource>().Play();
         var projectileObj = PhotonNetwork.Instantiate("vfx_ProjectileTut", firepoint.position, Quaternion.identity) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (destination - firepoint.position).normalized * projectileSpeed;
         unityGameObjects.Add(projectileObj);

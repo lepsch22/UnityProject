@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5719589157894300979}
   - component: {fileID: 5719589157894300977}
   - component: {fileID: 5719589157894300976}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,8 @@ GameObject:
   - component: {fileID: 5719589158079765364}
   - component: {fileID: 5719589158079765367}
   - component: {fileID: 5719589158079765368}
-  m_Layer: 0
+  - component: {fileID: 7380270661032978936}
+  m_Layer: 8
   m_Name: RightHand Controller
   m_TagString: Hands
   m_Icon: {fileID: 0}
@@ -740,6 +741,102 @@ MonoBehaviour:
   projectileSpeed: 30
   unityGameObjects: []
   cam: {fileID: 0}
+--- !u!82 &7380270661032978936
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719589158079765361}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d625e4af7ebb0c145a5a1235eeecffe2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 25
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9244995
+      value: 0.0029296875
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5719589158306557180
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +851,7 @@ GameObject:
   - component: {fileID: 5719589158306557152}
   - component: {fileID: 5719589158306557155}
   - component: {fileID: 5719589158306557154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand Controller
   m_TagString: Hands
   m_Icon: {fileID: 0}
@@ -1334,7 +1431,7 @@ GameObject:
   - component: {fileID: 5719589158566452707}
   - component: {fileID: 5719589158566452706}
   - component: {fileID: 5719589158566452733}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: To Spwan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1468,7 +1565,7 @@ GameObject:
   - component: {fileID: 5719589158666921268}
   - component: {fileID: 5719589158666921271}
   - component: {fileID: 5719589158666921270}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1602,7 +1699,7 @@ GameObject:
   - component: {fileID: 5719589158716964354}
   - component: {fileID: 5719589158716964381}
   - component: {fileID: 5719589158716964380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1780,7 +1877,7 @@ GameObject:
   - component: {fileID: 5719589158799858771}
   - component: {fileID: 5719589158799858770}
   - component: {fileID: 5719589158799858797}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Menu Canvas
   m_TagString: Hands
   m_Icon: {fileID: 0}
@@ -1951,7 +2048,7 @@ GameObject:
   - component: {fileID: 5719589159038565356}
   - component: {fileID: 5719589159038565359}
   - component: {fileID: 5719589159038565358}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2086,7 +2183,7 @@ GameObject:
   - component: {fileID: 5719589159278885858}
   - component: {fileID: 5719589159278885856}
   - component: {fileID: 5719589159278885859}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2228,7 +2325,7 @@ GameObject:
   - component: {fileID: 5719589159404463817}
   - component: {fileID: 5719589159404463667}
   - component: {fileID: 5719589159404463666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerHunterNew
   m_TagString: Hands
   m_Icon: {fileID: 0}
@@ -2387,8 +2484,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.5
+  m_Radius: 0.2
+  m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5719589159404463817
@@ -2444,7 +2541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5719589159697275263}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Camera Offset
   m_TagString: Hands
   m_Icon: {fileID: 0}
