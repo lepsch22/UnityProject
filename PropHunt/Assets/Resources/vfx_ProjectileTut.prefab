@@ -4901,6 +4901,7 @@ GameObject:
   - component: {fileID: 8105389563641200080}
   - component: {fileID: 1594649554640593930}
   - component: {fileID: 2059170658473502891}
+  - component: {fileID: 6671273585977952270}
   m_Layer: 0
   m_Name: vfx_ProjectileTut
   m_TagString: Bullet
@@ -4934,7 +4935,7 @@ SphereCollider:
   m_GameObject: {fileID: 1979709230727262631}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
@@ -4953,7 +4954,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!114 &8105389563641200080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5010,6 +5011,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!65 &6671273585977952270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979709230727262631}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13506982, y: 0.12112812, z: 0.19062655}
+  m_Center: {x: -0.0013884306, y: 0.013297681, z: -0.0012369677}
 --- !u!1 &6960461070122083382
 GameObject:
   m_ObjectHideFlags: 0

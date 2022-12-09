@@ -62,31 +62,44 @@ public class ProjectileShoot : MonoBehaviour
         if (isMyNetworkedPlayerDead) {
             Destroy(XROrigin);
         }
-        if (unityGameObjects.Count > 0)
-        {
-            for (int i = 0; i < unityGameObjects.Count; i++)
-                if (unityGameObjects[i].GetComponent<ProjectleTut>().destroyProjectile == true)
-                {
-                    Debug.Log("Test damage " + unityGameObjects[i].GetComponent<ProjectleTut>().hitNonPlayerProp);
-                    if(unityGameObjects[i].GetComponent<ProjectleTut>().hitNonPlayerProp == true)
-                    {
-
-                        int temp;
-                        int.TryParse(m_Object.text, out temp);
-                        temp = temp - 3;
-                        HPIntVal = temp;
-                        Debug.Log("Test String " + temp.ToString());
-
-                        m_Object.text = temp.ToString();
-
-
-
-                    }
-                    PhotonNetwork.Destroy(unityGameObjects[i]);
-                    unityGameObjects.RemoveAt(i);
-                }
-
-        }
+      
     }
 
+    public void subtractHealth() {
+        int temp;
+        int.TryParse(m_Object.text, out temp);
+        temp = temp - 3;
+        HPIntVal = temp;
+        Debug.Log("Test String " + temp.ToString());
+
+        m_Object.text = temp.ToString();
+    }
 }
+
+/*
+       if (unityGameObjects.Count > 0)
+       {
+           for (int i = 0; i < unityGameObjects.Count; i++)
+               if (unityGameObjects[i].GetComponent<ProjectleTut>().destroyProjectile == true)
+               {
+                   Debug.Log("Test damage " + unityGameObjects[i].GetComponent<ProjectleTut>().hitNonPlayerProp);
+                   if(unityGameObjects[i].GetComponent<ProjectleTut>().hitNonPlayerProp == true)
+                   {
+
+                       int temp;
+                       int.TryParse(m_Object.text, out temp);
+                       temp = temp - 3;
+                       HPIntVal = temp;
+                       Debug.Log("Test String " + temp.ToString());
+
+                       m_Object.text = temp.ToString();
+
+
+
+                   }
+                   PhotonNetwork.Destroy(unityGameObjects[i]);
+                   unityGameObjects.RemoveAt(i);
+               }
+
+       }
+       */

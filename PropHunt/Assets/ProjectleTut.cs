@@ -34,6 +34,15 @@ public class ProjectleTut : MonoBehaviour
             Debug.Log(co.gameObject.tag);
             destroyProjectile = true;
             collided = true;
+            if (destroyProjectile == true) {
+                if (hitNonPlayerProp == true)
+                {
+                    GameObject Hunter = GameObject.Find("PlayerHunterNew(Clone)");
+                    Hunter.GetComponentInChildren<ProjectileShoot>().subtractHealth();
+                }
+                PhotonNetwork.Destroy(gameObject);
+                Destroy(gameObject);
+            }
         }
     }
     private void Start()
