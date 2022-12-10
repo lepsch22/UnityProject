@@ -733,7 +733,7 @@ MonoBehaviour:
   triggerActionReference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_Object: {fileID: 5719589159038565358}
   XROrigin: {fileID: 5719589159404463813}
-  HPIntVal: 150
+  HPIntVal: 200
   isMyNetworkedPlayerDead: 0
   playSound: 0
   RHfirepoint: {fileID: 5719589158079765366}
@@ -2565,7 +2565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpActionReference: {fileID: -6845879089564033237, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  jumpForce: 425
+  jumpForce: 385
   rb: {fileID: 5719589159404463813}
   _isGrounded: 1
 --- !u!1 &5719589159697275262

@@ -13,7 +13,7 @@ public class ProjectileShoot : MonoBehaviour
     [SerializeField] private InputActionReference triggerActionReference;
     [SerializeField] TextMeshProUGUI m_Object;
     [SerializeField] GameObject XROrigin;
-    public int HPIntVal = 100;
+    public int HPIntVal = 200;
     public bool isMyNetworkedPlayerDead;
     public bool playSound = false;
     public Transform RHfirepoint;
