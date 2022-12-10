@@ -41,7 +41,7 @@ public class NetworkProp : MonoBehaviour
         childAudioSource = GetComponentInChildren<AudioSource>();
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine) {
-            InvokeRepeating("checkAudioPlay", 1, 1);
+            InvokeRepeating("checkAudioPlay", 3, 3);
         }
     }
     
@@ -116,6 +116,7 @@ public class NetworkProp : MonoBehaviour
 
             if (Random.Range(0, 6) == 2)
             {
+               
                 Debug.Log("Select a Song.");
                 int randNum = Random.Range(0, 100);
                 rareClipArray = Background_Music.GetComponent<songList>().rareClipArray;
@@ -137,18 +138,7 @@ public class NetworkProp : MonoBehaviour
                     audioClipListNum = 2;
                     audioClipIndex = Random.Range(0, hyperRareArray.Length);
                 }
-                if (audioClipListNum == 0)
-                {
-                    childAudioSource.clip = basicClipArray[audioClipIndex];
-                }
-                else if (audioClipListNum == 1)
-                {
-                    childAudioSource.clip = rareClipArray[audioClipIndex];
-                }
-                else if (audioClipListNum == 2)
-                {
-                    childAudioSource.clip = hyperRareArray[audioClipIndex];
-                }
+                XROrigin.GetComponent<playAudioClip>().playAudio(audioClipListNum, audioClipIndex);
                 photonView.RPC("playSoundNetworked", RpcTarget.All, audioClipListNum, audioClipIndex);
 
             }

@@ -70,7 +70,7 @@ public class ProjectileShoot : MonoBehaviour
     public void subtractHealth() {
         int temp;
         int.TryParse(m_Object.text, out temp);
-        temp = temp - 2;
+        temp = temp - 1;
         HPIntVal = temp;
         Debug.Log("Test String " + temp.ToString());
 
