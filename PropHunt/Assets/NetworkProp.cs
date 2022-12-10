@@ -27,6 +27,8 @@ public class NetworkProp : MonoBehaviour
     AudioClip[] hyperRareArray;
     AudioClip[] basicClipArray;
 
+    AudioSource childAudioSource;
+
     void Start()
     {
         Background_Music = GameObject.Find("BackGround_Music");
@@ -36,6 +38,7 @@ public class NetworkProp : MonoBehaviour
         rightHandController = GameObject.Find("RightHand Controller");
         XROrigin = GameObject.Find("PlayerPropNew(Clone)");
         Background_Music = GameObject.Find("BackGround_Music");
+        childAudioSource = GetComponentInChildren<AudioSource>();
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine) {
             InvokeRepeating("checkAudioPlay", 1, 1);
@@ -96,15 +99,15 @@ public class NetworkProp : MonoBehaviour
     {
         Debug.Log("RPC Play Random Sound");
         if (listNum == 0){
-            GetComponent<AudioSource>().clip = basicClipArray[clipIndex];
+            childAudioSource.clip = basicClipArray[clipIndex];
         }
         else if (listNum == 1) {
-            GetComponent<AudioSource>().clip = rareClipArray[clipIndex];
+            childAudioSource.clip = rareClipArray[clipIndex];
         }
         else if (listNum == 2){
-            GetComponent<AudioSource>().clip = hyperRareArray[clipIndex];
+            childAudioSource.clip = hyperRareArray[clipIndex];
         }
-        GetComponent<AudioSource>().Play();
+        childAudioSource.Play();
     }
     void checkAudioPlay() {
         if (photonView.IsMine)
