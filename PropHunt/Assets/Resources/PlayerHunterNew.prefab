@@ -735,6 +735,7 @@ MonoBehaviour:
   XROrigin: {fileID: 5719589159404463813}
   HPIntVal: 100
   isMyNetworkedPlayerDead: 0
+  playSound: 0
   RHfirepoint: {fileID: 5719589158079765366}
   projectile: {fileID: 1979709230727262631, guid: 0cfcd9c31433b0747be6eb0b92378df2, type: 3}
   rayInteractor: {fileID: 5719589158079765370}
@@ -2564,8 +2565,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpActionReference: {fileID: -6845879089564033237, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  jumpForce: 500
+  jumpForce: 425
   rb: {fileID: 5719589159404463813}
+  _isGrounded: 1
 --- !u!1 &5719589159697275262
 GameObject:
   m_ObjectHideFlags: 0

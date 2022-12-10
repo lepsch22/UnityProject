@@ -55,6 +55,7 @@ public class NetworkHunter : MonoBehaviour
                 PhotonNetwork.Destroy(gameObject);
             }  
         }
+        /*
         if (photonView.IsMine) {
             rightHandController = GameObject.Find("RightHand Controller");
             bool playSound = rightHandController.GetComponent<ProjectileShoot>().playSound;
@@ -66,6 +67,7 @@ public class NetworkHunter : MonoBehaviour
 
 
         }
+        */
     }
     void MapPosition(Transform target, GameObject Device) 
     {
