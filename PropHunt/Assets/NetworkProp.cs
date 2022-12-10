@@ -137,7 +137,18 @@ public class NetworkProp : MonoBehaviour
                     audioClipListNum = 2;
                     audioClipIndex = Random.Range(0, hyperRareArray.Length);
                 }
-
+                if (audioClipListNum == 0)
+                {
+                    childAudioSource.clip = basicClipArray[audioClipIndex];
+                }
+                else if (audioClipListNum == 1)
+                {
+                    childAudioSource.clip = rareClipArray[audioClipIndex];
+                }
+                else if (audioClipListNum == 2)
+                {
+                    childAudioSource.clip = hyperRareArray[audioClipIndex];
+                }
                 photonView.RPC("playSoundNetworked", RpcTarget.All, audioClipListNum, audioClipIndex);
 
             }
