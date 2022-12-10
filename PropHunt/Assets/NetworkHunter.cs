@@ -13,15 +13,17 @@ public class NetworkHunter : MonoBehaviour
     public GameObject leftHandController;
     public GameObject rightHandController;
     private PhotonView photonView;
-    private GameObject XROrigin;
+    private AudioSource audioSource;
     void Start()
     {
         //localPlace = GameObject.Find("Network Player Hunter").transform;
         //if (photonView.IsMine){
             //XROrigin = GameObject.Find("PlayerHunterNew");
+           
             CameraController = GameObject.Find("Main Camera");
             leftHandController = GameObject.Find("LeftHand Controller");
             rightHandController = GameObject.Find("RightHand Controller");
+            audioSource = GetComponentInChildren<AudioSource>();
             photonView = GetComponent<PhotonView>();
         //}
 
@@ -41,7 +43,7 @@ public class NetworkHunter : MonoBehaviour
             MapPosition(leftHand, leftHandController);
             MapPosition(Head, CameraController);
             MapPosition(rightHand, rightHandController);
-            this.transform.position = Head.transform.position;
+            //this.transform.position = Head.transform.position;
         }
         if (!photonView.IsMine) {
             //Debug.Log("Not My View");
@@ -57,6 +59,7 @@ public class NetworkHunter : MonoBehaviour
             rightHandController = GameObject.Find("RightHand Controller");
             bool playSound = rightHandController.GetComponent<ProjectileShoot>().playSound;
             if (playSound) {
+                GetComponent<AudioSource>().Play();
                 photonView.RPC("playSoundNetworked", RpcTarget.All);
             }
             rightHandController.GetComponent<ProjectileShoot>().playSound = false;
@@ -74,6 +77,7 @@ public class NetworkHunter : MonoBehaviour
     [PunRPC]
     void playSoundNetworked() {
         Debug.Log("RPC Shoot Projectile");
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
+        //GetComponentInChildren<AudioSource>().Play();
     }
 }

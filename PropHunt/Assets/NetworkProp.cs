@@ -15,27 +15,31 @@ public class NetworkProp : MonoBehaviour
     public GameObject rightHandController;
     public GameObject propLocationObject;
     public GameObject XROrigin;
+    public GameObject Background_Music;
+
     public GameObject collidedObject;
     private PhotonView photonView;
     public GameObject[] players;
-    
+
+    private int audioClipListNum = 0;
+    private int audioClipIndex=0;
+    AudioClip[] rareClipArray;
+    AudioClip[] hyperRareArray;
+    AudioClip[] basicClipArray;
+
     void Start()
     {
+        Background_Music = GameObject.Find("BackGround_Music");
+        rareClipArray = Background_Music.GetComponent<songList>().rareClipArray;
+        hyperRareArray = Background_Music.GetComponent<songList>().hyperRareArray;
+        basicClipArray = Background_Music.GetComponent<songList>().basicClipArray;
         rightHandController = GameObject.Find("RightHand Controller");
         XROrigin = GameObject.Find("PlayerPropNew(Clone)");
+        Background_Music = GameObject.Find("BackGround_Music");
         photonView = GetComponent<PhotonView>();
-        /*
-        if(photonView.IsMine){
-            players = GameObject.FindGameObjectsWithTag("PlayerPropNetworked");
-            foreach(GameObject obj in players){
-                if(!obj.GetPhotonView().IsMine){
-                var objToTurnInto = GameObject.FindWithTag(obj.GetComponent<NetworkProp>().currMesh);
-                obj.GetComponentInChildren<MeshFilter>().mesh = objToTurnInto.GetComponent<MeshFilter>().mesh;
-                obj.GetComponentInChildren<MeshRenderer>().materials = objToTurnInto.GetComponent<MeshRenderer>().materials;          
-                }
-            }
+        if (photonView.IsMine) {
+            InvokeRepeating("checkAudioPlay", 1, 1);
         }
-        */
     }
     
 
@@ -60,15 +64,11 @@ public class NetworkProp : MonoBehaviour
                 rightHandController.GetComponent<PropRay>().propChanged = false;
             }
         }
-
-
-
     }
     void MapPosition(Transform target, GameObject Device)
     {
         target.position = Device.transform.position;
         target.rotation = Device.transform.rotation;
-
     }
     public void ChangeMesh()
     {
@@ -89,7 +89,57 @@ public class NetworkProp : MonoBehaviour
         currMesh = meshTag;
         propLocationObject.GetComponent<MeshFilter>().mesh = mesh;
         propLocationObject.GetComponent<MeshRenderer>().materials = obj.GetComponent<MeshRenderer>().materials;
-        //propLocationObject.transform.rotation = obj.transform.rotation;
-        //propLocationObject.transform.position = new Vector3(propLocationObject.transform.position.x, propLocationObject.transform.position.y + 0.5f, propLocationObject.transform.position.z);
+
     }
+    [PunRPC]
+    void playSoundNetworked(int listNum, int clipIndex)
+    {
+        Debug.Log("RPC Play Random Sound");
+        if (listNum == 0){
+            GetComponent<AudioSource>().clip = basicClipArray[clipIndex];
+        }
+        else if (listNum == 1) {
+            GetComponent<AudioSource>().clip = rareClipArray[clipIndex];
+        }
+        else if (listNum == 2){
+            GetComponent<AudioSource>().clip = hyperRareArray[clipIndex];
+        }
+        GetComponent<AudioSource>().Play();
+    }
+    void checkAudioPlay() {
+        if (photonView.IsMine)
+        {
+            Debug.Log("CheckAudioPlay");
+
+            if (Random.Range(0, 6) == 2)
+            {
+                Debug.Log("Select a Song.");
+                int randNum = Random.Range(0, 100);
+                rareClipArray = Background_Music.GetComponent<songList>().rareClipArray;
+                hyperRareArray = Background_Music.GetComponent<songList>().hyperRareArray;
+                basicClipArray = Background_Music.GetComponent<songList>().basicClipArray;
+
+                if (randNum <= 70)
+                {
+                    audioClipIndex = Random.Range(0, basicClipArray.Length);
+                    audioClipListNum = 0;
+                }
+                else if (randNum >= 71 && randNum <= 95)
+                {
+                    audioClipListNum = 1;
+                    audioClipIndex = Random.Range(0, rareClipArray.Length);
+                }
+                else if (randNum >= 95 && randNum <= 100)
+                {
+                    audioClipListNum = 2;
+                    audioClipIndex = Random.Range(0, hyperRareArray.Length);
+                }
+
+                photonView.RPC("playSoundNetworked", RpcTarget.All, audioClipListNum, audioClipIndex);
+
+            }
+        }
+        
+    }
+
 }
