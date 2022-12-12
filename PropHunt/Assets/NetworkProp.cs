@@ -114,7 +114,7 @@ public class NetworkProp : MonoBehaviour
         {
             Debug.Log("CheckAudioPlay");
 
-            if (Random.Range(0, 6) == 2)
+            if (Random.Range(0, 8) == 2)
             {
                
                 Debug.Log("Select a Song.");
@@ -123,17 +123,17 @@ public class NetworkProp : MonoBehaviour
                 hyperRareArray = Background_Music.GetComponent<songList>().hyperRareArray;
                 basicClipArray = Background_Music.GetComponent<songList>().basicClipArray;
 
-                if (randNum <= 70)
+                if (randNum <= 85)
                 {
                     audioClipIndex = Random.Range(0, basicClipArray.Length);
                     audioClipListNum = 0;
                 }
-                else if (randNum >= 71 && randNum <= 95)
+                else if (randNum >= 86 && randNum <= 97)
                 {
                     audioClipListNum = 1;
                     audioClipIndex = Random.Range(0, rareClipArray.Length);
                 }
-                else if (randNum >= 95 && randNum <= 100)
+                else if (randNum >= 98 && randNum <= 100)
                 {
                     audioClipListNum = 2;
                     audioClipIndex = Random.Range(0, hyperRareArray.Length);

@@ -10540,6 +10540,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 992c3f7388674454e9a2fbdf145336f6, type: 3}
   - {fileID: 8300000, guid: 9222dc638fafb1e45b0e9d5594e604ab, type: 3}
   - {fileID: 8300000, guid: b6af9f7a9bee6754e9ff6cff9a07e6f2, type: 3}
+  - {fileID: 8300000, guid: 08e2e26091b24264c88fb8dffa779dad, type: 3}
+  - {fileID: 8300000, guid: 817a086eaaab93f4faac0b407319aa6a, type: 3}
+  - {fileID: 8300000, guid: e730f02d29d07224db14bbb4a6f98f31, type: 3}
   rareClipArray:
   - {fileID: 8300000, guid: 62a0b3aaa1435b344b6f6b7380dbd072, type: 3}
   - {fileID: 8300000, guid: d9433b77c77680d488cc805781020660, type: 3}
