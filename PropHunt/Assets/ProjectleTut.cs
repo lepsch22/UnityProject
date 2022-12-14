@@ -21,19 +21,19 @@ public class ProjectleTut : MonoBehaviour
             //destroyProjectile = true;
             if (co.gameObject.layer.ToString().Equals("7"))
             {
-                Debug.Log("Take Damage");
                 hitNonPlayerProp = true;
                 listOfCollidedObjects.Add("TakeDamage");
             }
             if (co.gameObject.tag == "PlayerProp") {
-                Debug.Log("Hit Player Prop");
                 collidedObject = co.gameObject;
                 listOfCollidedObjects.Add("PlayerProp");
             }
 
             //Debug.Log(co.gameObject.layer.ToString());
-            Debug.Log(co.gameObject.name);
-            Debug.Log(co.gameObject.tag);
+            //float meshArea = co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.x * co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.y * co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.z;
+            Debug.Log("Mesh area of " + co.gameObject.name + " is " + meshArea);
+
+            //Debug.Log(co.gameObject.tag);
             StartCoroutine(ExecuteAfterTime());
             /*
             destroyProjectile = true;
@@ -83,7 +83,6 @@ public class ProjectleTut : MonoBehaviour
 
     }
     void whatWasHit() {
-        Debug.Log("Going to decide player damage, olr prop hit.");
         if (!listOfCollidedObjects.Contains("PlayerProp") && listOfCollidedObjects.Contains("TakeDamage")) {
             hitNonPlayerProp = true;
         }

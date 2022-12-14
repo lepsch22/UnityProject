@@ -66,7 +66,6 @@ public class NetworkHunter : MonoBehaviour
     }
     [PunRPC]
     void playSoundNetworked() {
-        Debug.Log("RPC Shoot Projectile");
         audioSource.Play();
         //GetComponentInChildren<AudioSource>().Play();
     }

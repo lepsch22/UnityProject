@@ -117,7 +117,6 @@ public class NetworkProp : MonoBehaviour
             if (Random.Range(0, 8) == 2)
             {
                
-                Debug.Log("Select a Song.");
                 int randNum = Random.Range(0, 100);
                 rareClipArray = Background_Music.GetComponent<songList>().rareClipArray;
                 hyperRareArray = Background_Music.GetComponent<songList>().hyperRareArray;

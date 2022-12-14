@@ -72,7 +72,7 @@ public class ProjectileShoot : MonoBehaviour
         int.TryParse(m_Object.text, out temp);
         temp = temp - 1;
         HPIntVal = temp;
-        Debug.Log("Test String " + temp.ToString());
+        //Debug.Log("Test String " + temp.ToString());
 
         m_Object.text = temp.ToString();
     }
