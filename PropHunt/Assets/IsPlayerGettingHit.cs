@@ -8,7 +8,7 @@ using Photon.Pun;
 public class IsPlayerGettingHit : MonoBehaviour
 
 {
-    public bool isMyNetworkedPlayerDead;
+    public bool isMyNetworkedPlayerDead = false;
     public int HPIntVal = 100;
     [SerializeField] TextMeshProUGUI m_Object;
 
@@ -19,7 +19,7 @@ public class IsPlayerGettingHit : MonoBehaviour
             int temp;
             int.TryParse(m_Object.text, out temp);
             GameObject co = gameObject;
-            float meshArea = 1+co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.x * co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.y * co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.z;
+            float meshArea = 0.8f+co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.x * co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.y * co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.z;
             float hpToLose = (1 / (meshArea * 1.2f))*49f;
             temp = temp  - (int)hpToLose;
 
