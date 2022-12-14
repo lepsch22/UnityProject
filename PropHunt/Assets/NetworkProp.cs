@@ -54,7 +54,7 @@ public class NetworkProp : MonoBehaviour
             rightHandController = GameObject.Find("RightHand Controller");
             XROrigin = GameObject.Find("PlayerPropNew(Clone)");
             propLocationObject.SetActive(false);
-            if (XROrigin.GetComponent<IsPlayerGettingHit>().HPIntVal < 100) {
+            if (XROrigin.GetComponent<IsPlayerGettingHit>().HPIntVal <= 0) {
                 XROrigin.GetComponent<IsPlayerGettingHit>().isMyNetworkedPlayerDead = true;
                 PhotonNetwork.Destroy(gameObject);
                 
