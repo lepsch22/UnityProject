@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Photon.Pun;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class IsPlayerGettingHit : MonoBehaviour
@@ -31,6 +35,7 @@ public class IsPlayerGettingHit : MonoBehaviour
         if(isMyNetworkedPlayerDead)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("End Screen");
         }
 
     }

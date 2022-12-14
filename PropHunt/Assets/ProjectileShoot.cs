@@ -6,7 +6,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
-
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ProjectileShoot : MonoBehaviour
 {
@@ -24,6 +27,7 @@ public class ProjectileShoot : MonoBehaviour
     //public LayerMask mask;
     public Camera cam;
     private Vector3 destination;
+
     void Start()
     {
         triggerActionReference.action.performed += ShootProjectile;
@@ -63,7 +67,9 @@ public class ProjectileShoot : MonoBehaviour
     {
         if (isMyNetworkedPlayerDead) {
             Destroy(XROrigin);
-        }
+            SceneManager.LoadScene("End Screen");
+
+    }
       
     }
 
