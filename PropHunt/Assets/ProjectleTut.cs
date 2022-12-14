@@ -31,7 +31,7 @@ public class ProjectleTut : MonoBehaviour
 
             //Debug.Log(co.gameObject.layer.ToString());
             //float meshArea = co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.x * co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.y * co.gameObject.GetComponent<MeshFilter>().mesh.bounds.size.z;
-            Debug.Log("Mesh area of " + co.gameObject.name + " is " + meshArea);
+            //Debug.Log("Mesh area of " + co.gameObject.name + " is " + meshArea);
 
             //Debug.Log(co.gameObject.tag);
             StartCoroutine(ExecuteAfterTime());
